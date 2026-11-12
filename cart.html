@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your shopping cart at Fiama Flower Shop">
+  <title>Shopping Cart | Fiama Flower Shop</title>
+</head>
+
+<body class="bg-white">
+
+  <div id="header"></div>
+
+  <main class="w-full bg-white">
+
+    <!-- PAGE TITLE -->
+    <section class="flex min-h-[69px] flex-col items-center justify-center bg-[#f1f1f1] py-2">
+      <h1 class="text-xl font-bold text-black">Cart</h1>
+
+      <nav aria-label="Breadcrumb" class="mt-1 flex items-center gap-3 text-[11px] text-black">
+        <a href="/index.html" class="hover:text-[#ed5275]">Home</a>
+        <span>›</span>
+        <span>Cart</span>
+      </nav>
+    </section>
+
+    <!-- CART CONTENT -->
+    <section class="mx-auto max-w-[1200px] px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+
+      <!-- CART ITEMS -->
+      <div class="w-full">
+
+        <div id="cart-items" class="w-full">
+
+          <!-- Cart products will be added here using JavaScript -->
+
+        </div>
+
+        <!-- EMPTY CART -->
+        <div id="cart-empty" class="hidden py-16 text-center">
+          <h2 class="text-xl font-semibold text-[#333]">Your cart is empty!</h2>
+          <p class="mt-3 text-sm text-[#777]">
+            Looks like you haven't added any flowers to your cart yet.
+          </p>
+
+          <a href="/shop-left-sidebar.html"
+            class="mt-6 inline-flex bg-[#ed5275] px-8 py-3 text-xs font-semibold text-white transition hover:bg-[#333]">
+            Continue Shopping
+          </a>
+        </div>
+
+        <!-- COUPON AND UPDATE CART -->
+        <div id="cart-actions"
+          class="flex flex-col gap-4 border-b border-[#d9dfe3] py-4 sm:flex-row sm:items-center sm:justify-between">
+
+          <div class="flex w-full max-w-[310px]">
+            <input
+              id="cart-coupon"
+              type="text"
+              placeholder="Coupon code"
+              class="h-9 min-w-0 flex-1 bg-[#f7f7f7] px-4 text-[11px] outline-none"
+            >
+
+            <button
+              id="apply-coupon"
+              type="button"
+              class="h-9 bg-[#555] px-6 text-[11px] font-semibold text-white transition hover:bg-[#ed5275]">
+              Apply Coupon
+            </button>
+          </div>
+
+          <button
+            id="update-cart"
+            type="button"
+            class="h-9 w-full border border-[#555] px-7 text-[11px] text-[#555] transition hover:border-[#ed5275] hover:bg-[#ed5275] hover:text-white sm:w-auto">
+            Update Cart
+          </button>
+
+        </div>
+
+        <p id="cart-message" class="mt-3 text-xs"></p>
+
+      </div>
+
+      <!-- CART TOTALS -->
+      <div id="cart-totals" class="mt-10 flex justify-end">
+
+        <div class="w-full max-w-[400px]">
+
+          <h2 class="mb-4 text-base font-medium text-[#222]">
+            Cart Totals
+          </h2>
+
+          <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+            <span class="text-[#555]">Cart Subtotal</span>
+            <span id="cart-subtotal" class="text-[#222]">$0.00</span>
+          </div>
+
+          <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+            <span class="text-[#555]">Shipping and Handling</span>
+            <span id="cart-shipping" class="text-[#222]">$0.00</span>
+          </div>
+
+          <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+            <span class="text-[#555]">Vat</span>
+            <span id="cart-vat" class="text-[#222]">$0.00</span>
+          </div>
+
+          <div class="flex items-center justify-between px-1 py-3 text-xs font-bold">
+            <span class="text-[#222]">Order Total</span>
+            <span id="cart-total" class="text-black">$0.00</span>
+          </div>
+
+          <a
+            id="checkout-button"
+            href="/checkout.html"
+            class="flex h-10 w-full items-center justify-center bg-[#ed5275] px-4 text-center text-[11px] font-semibold text-white transition hover:bg-[#333]">
+            Proceed to checkout
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

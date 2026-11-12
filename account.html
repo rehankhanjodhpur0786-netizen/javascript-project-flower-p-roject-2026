@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Manage your Fiama Flower Shop account, orders, addresses and account details."
+  >
+
+  <title>My Account | Fiama Flower Shop</title>
+</head>
+
+<body class="bg-white">
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full bg-white">
+
+    <!-- PAGE TITLE -->
+    <section class="bg-[#f1f1f1] py-7 sm:py-8">
+      <div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        <h1 class="text-center text-xl font-bold text-black sm:text-2xl">
+          My Account
+        </h1>
+
+        <div class="mt-1 flex items-center justify-center gap-2 text-[11px] text-black">
+          <a href="/index.html" class="transition hover:text-[#ed5275]">Home</a>
+          <span aria-hidden="true">›</span>
+          <span>My Account</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOUNT DASHBOARD -->
+    <section class="py-12 sm:py-16">
+      <div class="mx-auto max-w-[858px] px-4 sm:px-6 lg:px-0">
+        <div class="grid grid-cols-1 items-start gap-7 md:grid-cols-[243px_minmax(0,1fr)] md:gap-12">
+
+          <!-- ACCOUNT SIDEBAR -->
+          <aside class="h-fit min-w-0 border border-gray-200">
+            <nav class="flex flex-col" aria-label="Account navigation">
+
+              <!-- DASHBOARD -->
+              <button
+                type="button"
+                data-account-tab="dashboard"
+                aria-selected="true"
+                class="flex w-full items-center justify-between border-b border-gray-100 px-4 py-3 text-left text-[11px] font-medium text-[#777] transition hover:text-[#ed5275] aria-selected:border-[#061f20] aria-selected:bg-[#061f20] aria-selected:text-white"
+              >
+                <span>Dashboard</span>
+                <svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8v9.7a.5.5 0 0 1-.5.5h-6v-6h-5v6h-6a.5.5 0 0 1-.5-.5z"/><path d="M1.5 10.5 12 1.5l10.5 9-1.3 1.5L12 4.2l-9.2 7.8z"/></svg>
+              </button>
+
+              <!-- ORDERS -->
+              <button
+                type="button"
+                data-account-tab="orders"
+                aria-selected="false"
+                class="flex w-full items-center justify-between border-b border-gray-100 px-4 py-3 text-left text-[11px] font-medium text-[#777] transition hover:text-[#ed5275] aria-selected:border-[#061f20] aria-selected:bg-[#061f20] aria-selected:text-white"
+              >
+                <span>Orders</span>
+                <svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 3.5V8h4.5" fill="none" stroke="white" stroke-width="1.5"/><path d="M9 12h8M9 15h8M9 18h6" stroke="white" stroke-width="1.3"/></svg>
+              </button>
+
+              <!-- DOWNLOADS -->
+              <button
+                type="button"
+                data-account-tab="downloads"
+                aria-selected="false"
+                class="flex w-full items-center justify-between border-b border-gray-100 px-4 py-3 text-left text-[11px] font-medium text-[#777] transition hover:text-[#ed5275] aria-selected:border-[#061f20] aria-selected:bg-[#061f20] aria-selected:text-white"
+              >
+                <span>Downloads</span>
+                <svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v13m-5-5 5 5 5-5M5 20h14"/></svg>
+              </button>
+
+              <!-- ADDRESSES -->
+              <button
+                type="button"
+                data-account-tab="addresses"
+                aria-selected="false"
+                class="flex w-full items-center justify-between border-b border-gray-100 px-4 py-3 text-left text-[11px] font-medium text-[#777] transition hover:text-[#ed5275] aria-selected:border-[#061f20] aria-selected:bg-[#061f20] aria-selected:text-white"
+              >
+                <span>address</span>
+                <svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 12 8 12s8-6.5 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+              </button>
+
+              <!-- ACCOUNT DETAILS -->
+              <button
+                type="button"
+                data-account-tab="details"
+                aria-selected="false"
+                class="flex w-full items-center justify-between border-b border-gray-100 px-4 py-3 text-left text-[11px] font-medium text-[#777] transition hover:text-[#ed5275] aria-selected:border-[#061f20] aria-selected:bg-[#061f20] aria-selected:text-white"
+              >
+                <span>Account Details</span>
+                <svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm-8 9a8 8 0 0 1 16 0z"/></svg>
+              </button>
+
+              <!-- LOGOUT -->
+              <a
+                href="/login.html"
+                class="flex items-center justify-between px-4 py-3 text-[11px] font-medium text-[#b45d70] transition hover:bg-gray-50 hover:text-[#ed5275]"
+              >
+                <span>Logout</span>
+                <svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"/></svg>
+              </a>
+            </nav>
+          </aside>
+
+          <!-- ACCOUNT CONTENT -->
+          <div class="min-w-0">
+
+            <!-- DASHBOARD PANEL -->
+            <section data-account-panel="dashboard" class="block">
+              <div class="bg-[#f8f8f8] px-4 py-4 text-[11px] leading-5 text-[#555] sm:px-5">
+                Hello <span class="font-medium text-[#333]">UserName</span> (not UserName? <a href="/login.html" class="text-[#333] hover:text-[#ed5275]">Log out</a>)
+              </div>
+
+              <div class="mt-4 bg-[#f8f8f8] px-4 py-4 text-[11px] leading-5 text-[#555] sm:px-5">
+                From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.
+              </div>
+            </section>
+
+            <!-- ================================== -->
+            <!-- ORDERS PANEL -->
+            <!-- ================================== -->
+
+            <section
+              data-account-panel="orders"
+              hidden
+            >
+
+              <div class="border-b border-gray-200 pb-5">
+                <h2 class="text-xl font-semibold text-[#222]">
+                  My Orders
+                </h2>
+
+                <p class="mt-2 text-sm text-[#777]">
+                  View your recent orders and order history.
+                </p>
+              </div>
+
+              <div class="mt-7 overflow-x-auto">
+
+                <table class="w-full min-w-[550px] text-left">
+
+                  <thead>
+                    <tr class="border-b border-gray-200">
+
+                      <th class="px-4 py-4 text-xs font-semibold text-[#333]">
+                        ORDER
+                      </th>
+
+                      <th class="px-4 py-4 text-xs font-semibold text-[#333]">
+                        DATE
+                      </th>
+
+                      <th class="px-4 py-4 text-xs font-semibold text-[#333]">
+                        STATUS
+                      </th>
+
+                      <th class="px-4 py-4 text-xs font-semibold text-[#333]">
+                        TOTAL
+                      </th>
+
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <td
+                        colspan="4"
+                        class="px-4 py-10 text-center text-sm text-[#888]"
+                      >
+                        You haven't placed any orders yet.
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+              <a
+                href="/shop-left-sidebar.html"
+                class="mt-6 inline-block bg-[#ed5275] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#d83f63]"
+              >
+                BROWSE PRODUCTS
+              </a>
+
+            </section>
+
+            <!-- ================================== -->
+            <!-- DOWNLOADS PANEL -->
+            <!-- ================================== -->
+
+            <section
+              data-account-panel="downloads"
+              hidden
+            >
+
+              <div class="border-b border-gray-200 pb-5">
+                <h2 class="text-xl font-semibold text-[#222]">
+                  Downloads
+                </h2>
+
+                <p class="mt-2 text-sm text-[#777]">
+                  Your available downloads will appear here.
+                </p>
+              </div>
+
+              <div class="mt-7 border border-gray-200 px-5 py-12 text-center">
+
+                <h3 class="text-base font-semibold text-[#333]">
+                  No Downloads Available
+                </h3>
+
+                <p class="mt-2 text-sm text-[#888]">
+                  You don't have any downloadable products yet.
+                </p>
+
+              </div>
+
+            </section>
+
+            <!-- ================================== -->
+            <!-- ADDRESSES PANEL -->
+            <!-- ================================== -->
+
+            <section
+              data-account-panel="addresses"
+              hidden
+            >
+
+              <div class="border-b border-gray-200 pb-5">
+                <h2 class="text-xl font-semibold text-[#222]">
+                  My Addresses
+                </h2>
+
+                <p class="mt-2 text-sm text-[#777]">
+                  Manage your billing and shipping addresses.
+                </p>
+              </div>
+
+              <div class="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2">
+
+                <!-- BILLING ADDRESS -->
+                <div class="border border-gray-200 p-5">
+
+                  <h3 class="text-sm font-semibold text-[#222]">
+                    Billing Address
+                  </h3>
+
+                  <p class="mt-3 text-xs leading-6 text-[#888]">
+                    No billing address has been saved yet.
+                  </p>
+
+                  <button
+                    type="button"
+                    data-account-tab-link="details"
+                    class="mt-5 text-xs font-semibold text-[#ed5275] hover:underline"
+                  >
+                    EDIT ACCOUNT DETAILS
+                  </button>
+
+                </div>
+
+                <!-- SHIPPING ADDRESS -->
+                <div class="border border-gray-200 p-5">
+
+                  <h3 class="text-sm font-semibold text-[#222]">
+                    Shipping Address
+                  </h3>
+
+                  <p class="mt-3 text-xs leading-6 text-[#888]">
+                    No shipping address has been saved yet.
+                  </p>
+
+                  <a
+                    href="/checkout.html"
+                    class="mt-5 inline-block text-xs font-semibold text-[#ed5275] hover:underline"
+                  >
+                    GO TO CHECKOUT
+                  </a>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- ================================== -->
+            <!-- ACCOUNT DETAILS PANEL -->
+            <!-- ================================== -->
+
+            <section
+              data-account-panel="details"
+              hidden
+            >
+
+              <div class="border-b border-gray-200 pb-5">
+                <h2 class="text-xl font-semibold text-[#222]">
+                  Account Details
+                </h2>
+
+                <p class="mt-2 text-sm text-[#777]">
+                  Update your personal information and password.
+                </p>
+              </div>
+
+              <!-- ACCOUNT DETAILS FORM -->
+              <form
+                id="account-details-form"
+                class="mt-7"
+              >
+
+                <!-- FIRST NAME AND LAST NAME -->
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+                  <div>
+                    <label
+                      for="account-first-name"
+                      class="mb-2 block text-xs font-semibold text-[#333]"
+                    >
+                      First Name
+                      <span class="text-[#ed5275]">*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      id="account-first-name"
+                      name="firstName"
+                      placeholder="First Name"
+                      autocomplete="given-name"
+                      required
+                      class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                    >
+                  </div>
+
+                  <div>
+                    <label
+                      for="account-last-name"
+                      class="mb-2 block text-xs font-semibold text-[#333]"
+                    >
+                      Last Name
+                      <span class="text-[#ed5275]">*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      id="account-last-name"
+                      name="lastName"
+                      placeholder="Last Name"
+                      autocomplete="family-name"
+                      required
+                      class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                    >
+                  </div>
+
+                </div>
+
+                <!-- DISPLAY NAME -->
+                <div class="mt-5">
+
+                  <label
+                    for="account-display-name"
+                    class="mb-2 block text-xs font-semibold text-[#333]"
+                  >
+                    Display Name
+                    <span class="text-[#ed5275]">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="account-display-name"
+                    name="displayName"
+                    placeholder="Display Name"
+                    required
+                    class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                  >
+
+                  <p class="mt-2 text-[11px] text-[#999]">
+                    This will be how your name will be displayed in your account.
+                  </p>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="mt-5">
+
+                  <label
+                    for="account-details-email"
+                    class="mb-2 block text-xs font-semibold text-[#333]"
+                  >
+                    Email Address
+                    <span class="text-[#ed5275]">*</span>
+                  </label>
+
+                  <input
+                    type="email"
+                    id="account-details-email"
+                    name="email"
+                    placeholder="Email Address"
+                    autocomplete="email"
+                    required
+                    class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                  >
+
+                </div>
+
+                <!-- PASSWORD CHANGE -->
+                <div class="mt-10 border-t border-gray-200 pt-7">
+
+                  <h3 class="text-base font-semibold text-[#222]">
+                    Password Change
+                  </h3>
+
+                  <p class="mt-2 text-xs leading-5 text-[#888]">
+                    Leave these fields empty if you don't want to change your password.
+                  </p>
+
+                  <!-- CURRENT PASSWORD -->
+                  <div class="mt-5">
+
+                    <label
+                      for="account-current-password"
+                      class="mb-2 block text-xs font-semibold text-[#333]"
+                    >
+                      Current Password
+                    </label>
+
+                    <input
+                      type="password"
+                      id="account-current-password"
+                      name="currentPassword"
+                      autocomplete="current-password"
+                      placeholder="Current Password"
+                      class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                    >
+
+                  </div>
+
+                  <!-- NEW PASSWORD -->
+                  <div class="mt-5">
+
+                    <label
+                      for="account-new-password"
+                      class="mb-2 block text-xs font-semibold text-[#333]"
+                    >
+                      New Password
+                    </label>
+
+                    <input
+                      type="password"
+                      id="account-new-password"
+                      name="newPassword"
+                      autocomplete="new-password"
+                      placeholder="New Password"
+                      class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                    >
+
+                  </div>
+
+                  <!-- CONFIRM PASSWORD -->
+                  <div class="mt-5">
+
+                    <label
+                      for="account-confirm-password"
+                      class="mb-2 block text-xs font-semibold text-[#333]"
+                    >
+                      Confirm New Password
+                    </label>
+
+                    <input
+                      type="password"
+                      id="account-confirm-password"
+                      name="confirmPassword"
+                      autocomplete="new-password"
+                      placeholder="Confirm New Password"
+                      class="w-full border border-gray-200 px-4 py-3 text-sm text-[#333] outline-none transition focus:border-[#ed5275]"
+                    >
+
+                  </div>
+
+                </div>
+
+                <!-- FORM MESSAGE -->
+                <p
+                  id="account-details-message"
+                  class="mt-5 text-xs leading-5"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+
+                <!-- SAVE BUTTON -->
+                <button
+                  type="submit"
+                  class="mt-5 bg-[#ed5275] px-8 py-3.5 text-xs font-semibold text-white transition hover:bg-[#d83f63]"
+                >
+                  SAVE CHANGES
+                </button>
+
+              </form>
+
+            </section>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- MAIN SCRIPTS -->
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

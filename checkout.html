@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout at Fiama Flower Shop">
+  <title>Checkout | Fiama Flower Shop</title>
+</head>
+
+<body class="bg-white">
+
+  <div id="header"></div>
+
+  <main class="w-full bg-white">
+
+    <!-- PAGE TITLE -->
+    <section class="flex min-h-[69px] flex-col items-center justify-center bg-[#f1f1f1] py-2">
+      <h1 class="text-xl font-bold text-black">Checkout</h1>
+
+      <nav aria-label="Breadcrumb" class="mt-1 flex items-center gap-3 text-[11px] text-black">
+        <a href="/index.html" class="hover:text-[#ed5275]">Home</a>
+        <span>›</span>
+        <span>Checkout</span>
+      </nav>
+    </section>
+
+    <!-- CHECKOUT CONTENT -->
+    <section class="mx-auto max-w-[1200px] px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+
+      <!-- RETURNING CUSTOMER -->
+      <div class="mb-4 bg-[#f7f7f7] px-4 py-3 text-[11px] text-black">
+        Returning customer?
+        <button
+          type="button"
+          id="checkout-login-toggle"
+          class="text-[#ed5275] hover:text-black">
+          Click here to login
+        </button>
+
+        <div id="checkout-login-panel" class="hidden pt-4">
+          <p class="mb-3 text-[#777]">
+            If you have shopped with us before, please login.
+          </p>
+
+          <a
+            href="/login.html"
+            class="inline-flex bg-[#ed5275] px-6 py-2 text-[11px] font-semibold text-white transition hover:bg-[#333]">
+            Login
+          </a>
+        </div>
+      </div>
+
+      <!-- COUPON -->
+      <div class="mb-6 bg-[#f7f7f7] px-4 py-3 text-[11px] text-black">
+        Have a coupon?
+        <button
+          type="button"
+          id="checkout-coupon-toggle"
+          class="text-[#ed5275] hover:text-black">
+          Click here to enter your code
+        </button>
+
+        <div id="checkout-coupon-panel" class="hidden pt-4">
+
+          <p class="mb-3 text-[#777]">
+            Enter your coupon code if you have one.
+          </p>
+
+          <div class="flex max-w-[400px]">
+            <input
+              id="checkout-coupon"
+              type="text"
+              placeholder="Coupon code"
+              class="h-10 min-w-0 flex-1 bg-white px-4 text-xs outline-none"
+            >
+
+            <button
+              type="button"
+              id="checkout-apply-coupon"
+              class="bg-[#555] px-6 text-[11px] font-semibold text-white transition hover:bg-[#ed5275]">
+              Apply Coupon
+            </button>
+          </div>
+
+          <p id="checkout-coupon-message" class="mt-2 text-xs"></p>
+        </div>
+      </div>
+
+      <!-- BILLING DETAILS -->
+      <h2 class="mb-4 w-fit border-b border-[#d9dfe3] pb-2 pr-16 text-sm font-medium text-black">
+        Billing Details
+      </h2>
+
+      <form id="checkout-form">
+
+        <div class="border border-[#e5e5e5] p-4 sm:p-6">
+
+          <h3 class="mb-3 text-xs font-medium text-black">
+            Personal Information
+          </h3>
+
+          <!-- PERSONAL INFORMATION -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First name"
+              required
+              autocomplete="given-name"
+              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+            >
+
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              required
+              autocomplete="family-name"
+              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+            >
+
+            <input
+              type="email"
+              name="email"
+              placeholder="email address"
+              required
+              autocomplete="email"
+              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+            >
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="phone number"
+              required
+              autocomplete="tel"
+              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+            >
+
+            <input
+              type="text"
+              name="company"
+              placeholder="Company name (optional)"
+              autocomplete="organization"
+              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+            >
+
+            <input
+              type="text"
+              name="companyAddress"
+              placeholder="Company address (optional)"
+              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+            >
+
+          </div>
+
+          <!-- COUNTRY -->
+          <div class="mt-5 max-w-[300px]">
+
+            <label for="checkout-country" class="mb-2 block text-xs font-medium text-black">
+              Country
+            </label>
+
+            <select
+              id="checkout-country"
+              name="country"
+              required
+              class="h-[42px] w-full border border-[#e5e5e5] bg-white px-3 text-[11px] outline-none focus:border-[#ed5275]">
+              <option value="">Select Country</option>
+              <option value="India">India</option>
+              <option value="United States">United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+            </select>
+
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="mt-5">
+
+            <label class="mb-2 block text-xs font-medium text-black">
+              Address
+            </label>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+              <input
+                type="text"
+                name="address"
+                placeholder="House number and street name"
+                required
+                autocomplete="street-address"
+                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              >
+
+              <input
+                type="text"
+                name="apartment"
+                placeholder="Apartment, suite, unit etc. (optional)"
+                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              >
+
+            </div>
+
+          </div>
+
+          <!-- CITY STATE ZIP -->
+          <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+            <div>
+              <label for="checkout-city" class="mb-2 block text-xs font-medium text-black">
+                Town / City
+              </label>
+
+              <input
+                id="checkout-city"
+                type="text"
+                name="city"
+                placeholder="City"
+                required
+                autocomplete="address-level2"
+                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              >
+            </div>
+
+            <div>
+              <label for="checkout-state" class="mb-2 block text-xs font-medium text-black">
+                State
+              </label>
+
+              <input
+                id="checkout-state"
+                type="text"
+                name="state"
+                placeholder="State"
+                required
+                autocomplete="address-level1"
+                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              >
+            </div>
+
+            <div>
+              <label for="checkout-zip" class="mb-2 block text-xs font-medium text-black">
+                Zip
+              </label>
+
+              <input
+                id="checkout-zip"
+                type="text"
+                name="zip"
+                placeholder="Zip"
+                required
+                autocomplete="postal-code"
+                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              >
+            </div>
+
+          </div>
+
+          <!-- CREATE ACCOUNT -->
+          <label class="mt-5 flex w-fit items-center gap-2 text-[11px] text-black">
+            <input
+              type="checkbox"
+              name="createAccount"
+              class="accent-[#ed5275]"
+            >
+            Create an account?
+          </label>
+
+          <!-- ORDER NOTES -->
+          <div class="mt-5">
+
+            <label for="checkout-notes" class="mb-2 block text-xs font-medium text-black">
+              Order Notes (optional)
+            </label>
+
+            <textarea
+              id="checkout-notes"
+              name="orderNotes"
+              rows="5"
+              placeholder="Notes about your order, e.g. special notes for delivery."
+              class="w-full resize-y bg-[#f7f7f7] px-3 py-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"></textarea>
+
+          </div>
+
+        </div>
+
+        <!-- PAYMENT AND TOTALS -->
+        <div class="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+
+          <!-- PAYMENT METHOD -->
+          <div>
+
+            <h2 class="mb-4 w-fit border-b border-[#d9dfe3] pb-2 pr-16 text-sm font-medium text-black">
+              Payment Method
+            </h2>
+
+            <div class="border border-[#d0d0d0]">
+
+              <!-- CHECK PAYMENTS -->
+              <label class="flex cursor-pointer items-center gap-2 border-b border-[#d0d0d0] px-3 py-4 text-xs text-black">
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  value="check"
+                  class="accent-[#ed5275]"
+                >
+                Check payments
+              </label>
+
+              <!-- CASH ON DELIVERY -->
+              <div class="border-b border-[#d0d0d0]">
+
+                <label class="flex cursor-pointer items-center gap-2 px-3 py-4 text-xs text-black">
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="cod"
+                    checked
+                    class="accent-[#ed5275]"
+                  >
+                  Cash on delivery
+                </label>
+
+                <div
+                  id="checkout-cod-description"
+                  class="mx-3 mb-3 border border-[#e5e5e5] bg-white px-4 py-4 text-[10px] text-[#777] shadow-sm">
+                  Pay with cash upon delivery.
+                </div>
+
+              </div>
+
+              <!-- PAYPAL -->
+              <label class="flex cursor-pointer flex-wrap items-center gap-2 px-3 py-4 text-xs text-black">
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  value="paypal"
+                  class="accent-[#ed5275]"
+                >
+
+                <span>PayPal</span>
+
+                <span class="ml-2 flex items-center gap-1 font-bold text-[#1646a0]">
+                  <span class="rounded bg-white px-1 text-[10px]">VISA</span>
+                  <span class="rounded bg-white px-1 text-[10px]">Mastercard</span>
+                </span>
+              </label>
+
+            </div>
+
+            <p class="mt-5 text-[10px] leading-5 text-[#777]">
+              Your personal data will be used to process your order,
+              support your experience throughout this website, and for
+              other purposes described in our privacy policy.
+            </p>
+
+            <p id="checkout-status" class="mt-3 text-xs"></p>
+
+            <button
+              type="submit"
+              id="place-order-button"
+              class="mt-4 h-11 bg-[#ed5275] px-8 text-[11px] font-semibold text-white transition hover:bg-[#333]">
+              PLACE ORDER
+            </button>
+
+          </div>
+
+          <!-- CART TOTALS -->
+          <div>
+
+            <h2 class="mb-4 w-fit border-b border-[#d9dfe3] pb-2 pr-16 text-sm font-medium text-black">
+              Cart Totals
+            </h2>
+
+            <!-- PRODUCT LIST -->
+            <div id="checkout-order-items" class="w-full">
+
+              <!-- Products will be loaded from cart using JavaScript -->
+
+            </div>
+
+            <!-- PRODUCT TEMPLATE -->
+            <template id="checkout-item-template">
+
+              <div
+                data-checkout-item
+                class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-[11px]">
+
+                <div class="flex min-w-0 items-center gap-2">
+
+                  <span
+                    data-checkout-name
+                    class="truncate text-[#555]">
+                  </span>
+
+                  <span class="shrink-0 font-bold text-black">
+                    ×
+                    <span data-checkout-quantity></span>
+                  </span>
+
+                </div>
+
+                <span
+                  data-checkout-line-total
+                  class="shrink-0 text-black">
+                </span>
+
+              </div>
+
+            </template>
+
+            <!-- SUBTOTAL -->
+            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+              <span class="text-[#555]">Cart Subtotal</span>
+              <span id="checkout-subtotal" class="text-black">$0.00</span>
+            </div>
+
+            <!-- DISCOUNT -->
+            <div
+              id="checkout-discount-row"
+              class="hidden flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+              <span class="text-[#555]">Discount</span>
+              <span id="checkout-discount" class="text-[#ed5275]">-$0.00</span>
+            </div>
+
+            <!-- SHIPPING -->
+            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+              <span class="text-[#555]">Shipping and Handling</span>
+              <span id="checkout-shipping" class="text-black">$0.00</span>
+            </div>
+
+            <!-- VAT -->
+            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+              <span class="text-[#555]">Vat</span>
+              <span id="checkout-vat" class="text-black">$0.00</span>
+            </div>
+
+            <!-- ORDER TOTAL -->
+            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs font-bold">
+              <span class="text-black">Order Total</span>
+              <span id="checkout-total" class="text-black">$0.00</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

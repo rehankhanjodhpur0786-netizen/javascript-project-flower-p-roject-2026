@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Wishlist | Fiama Flower Shop">
+  <title>Wishlist | Fiama Flower Shop</title>
+</head>
+
+<body class="bg-white">
+
+  <div id="header"></div>
+
+  <main>
+
+    <!-- PAGE TITLE -->
+    <section class="bg-[#f0f0f0] py-7 text-center">
+      <h1 class="text-2xl font-bold text-black">Wishlist</h1>
+
+      <div class="mt-1 flex items-center justify-center gap-2 text-xs text-black">
+        <a href="/index.html" class="hover:text-pink-600">Home</a>
+        <span>›</span>
+        <span>Wishlist</span>
+      </div>
+    </section>
+
+    <!-- WISHLIST PRODUCTS -->
+    <section class="mx-auto max-w-[900px] px-5 pb-16 pt-14">
+
+      <div id="wishlist-items"></div>
+
+      <!-- EMPTY WISHLIST -->
+      <div id="wishlist-empty" class="hidden py-16 text-center">
+        <h2 class="text-xl font-semibold text-gray-800">
+          Your Wishlist is Empty
+        </h2>
+
+        <p class="mt-2 text-sm text-gray-500">
+          You haven't added any products to your wishlist yet.
+        </p>
+
+        <a
+          href="/shop-left-sidebar.html"
+          class="mt-6 inline-block bg-[#555] px-8 py-3 text-sm text-white transition hover:bg-pink-600"
+        >
+          Continue Shopping
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product details at Fiama Flower Shop">
+  <title>Product Details | Fiama Flower Shop</title>
+</head>
+
+<body class="bg-white text-[#555]">
+
+  <div id="header"></div>
+
+  <main>
+
+    <!-- PAGE TITLE -->
+    <section class="bg-[#f3f3f3] py-5 text-center">
+      <h1 class="text-[22px] font-semibold text-[#222]">Products</h1>
+      <p class="mt-1 text-[11px] text-gray-500">
+        <a href="/index.html" class="hover:text-[#ed5275]">Home</a>
+        <span class="mx-1">/</span>
+        <span class="text-[#ed5275]">Products</span>
+      </p>
+    </section>
+
+    <!-- PRODUCT DETAILS -->
+    <section class="mx-auto max-w-[1200px] px-4 py-10 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+
+        <!-- PRODUCT GALLERY -->
+        <div class="flex gap-3 sm:gap-5">
+
+          <!-- THUMBNAILS -->
+          <div class="flex w-[55px] shrink-0 flex-col items-center gap-2 sm:w-[75px]">
+
+            <button
+              type="button"
+              id="product-gallery-prev"
+              aria-label="Previous product image"
+              class="flex h-7 w-full items-center justify-center border border-gray-200 text-lg transition hover:border-[#ed5275] hover:text-[#ed5275]">
+              ↑
+            </button>
+
+            <div
+              id="product-thumbnail-list"
+              class="flex max-h-[280px] w-full flex-col gap-3 overflow-y-auto scroll-smooth sm:max-h-[390px]">
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-1.jpg"
+                class="shrink-0 overflow-hidden border border-[#ed5275] p-1">
+                <img src="/images/products/product-1.jpg" alt="Product image 1"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-2.jpg"
+                class="shrink-0 overflow-hidden border border-gray-200 p-1">
+                <img src="/images/products/product-2.jpg" alt="Product image 2"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-3.jpg"
+                class="shrink-0 overflow-hidden border border-gray-200 p-1">
+                <img src="/images/products/product-3.jpg" alt="Product image 3"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-4.jpg"
+                class="shrink-0 overflow-hidden border border-gray-200 p-1">
+                <img src="/images/products/product-4.jpg" alt="Product image 4"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-5.jpg"
+                class="shrink-0 overflow-hidden border border-gray-200 p-1">
+                <img src="/images/products/product-5.jpg" alt="Product image 5"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-6.jpg"
+                class="shrink-0 overflow-hidden border border-gray-200 p-1">
+                <img src="/images/products/product-6.jpg" alt="Product image 6"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+              <button type="button" data-product-thumbnail
+                data-image="/images/products/product-7.jpg"
+                class="shrink-0 overflow-hidden border border-gray-200 p-1">
+                <img src="/images/products/product-7.jpg" alt="Product image 7"
+                  class="h-[65px] w-full object-contain sm:h-[85px]">
+              </button>
+
+            </div>
+
+            <button
+              type="button"
+              id="product-gallery-next"
+              aria-label="Next product image"
+              class="flex h-7 w-full items-center justify-center border border-gray-200 text-lg transition hover:border-[#ed5275] hover:text-[#ed5275]">
+              ↓
+            </button>
+
+          </div>
+
+          <!-- MAIN IMAGE -->
+          <div class="flex min-h-[280px] flex-1 items-center justify-center bg-[#f7f7f7] sm:min-h-[390px]">
+            <img
+              id="product-main-image"
+              src="/images/products/product-1.jpg"
+              alt="Pink Flower Tree"
+              class="h-full max-h-[390px] w-full object-contain p-3 sm:p-6">
+          </div>
+
+        </div>
+
+        <!-- PRODUCT INFORMATION -->
+        <div class="pt-1">
+
+          <h2 class="text-[23px] font-medium text-[#222] sm:text-[27px]">
+            Pink Flower Tree Red
+          </h2>
+
+          <div class="mt-3 flex flex-wrap items-center gap-3">
+            <span class="text-[17px] font-medium text-[#ed5275]">$49.00</span>
+            <span class="text-[13px] text-gray-400 line-through">$55.00</span>
+            <span class="text-[11px] text-[#ed5275]">Save 10%</span>
+          </div>
+
+          <div class="mt-3 flex items-center gap-2 text-[12px]">
+            <span class="tracking-wider text-[#e8b34b]">★★★★★</span>
+            <span class="text-gray-400">(4 customer reviews)</span>
+          </div>
+
+          <p class="mt-5 max-w-[500px] text-[13px] leading-6 text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Doloribus voluptates reprehenderit necessitatibus earum
+            perspiciatis repellat, quisquam repudiandae. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <!-- COLOR -->
+          <div class="mt-6">
+            <h3 class="mb-3 text-[13px] font-medium text-[#333]">Color</h3>
+
+            <div class="flex items-center gap-3">
+              <button type="button" data-product-color="red" aria-label="Red color"
+                class="h-4 w-4 rounded-full border-2 border-white bg-[#ed5275] ring-1 ring-[#ed5275]"></button>
+              <button type="button" data-product-color="green" aria-label="Green color"
+                class="h-4 w-4 rounded-full bg-green-500"></button>
+              <button type="button" data-product-color="purple" aria-label="Purple color"
+                class="h-4 w-4 rounded-full bg-purple-500"></button>
+              <button type="button" data-product-color="blue" aria-label="Blue color"
+                class="h-4 w-4 rounded-full bg-blue-500"></button>
+              <button type="button" data-product-color="yellow" aria-label="Yellow color"
+                class="h-4 w-4 rounded-full bg-yellow-400"></button>
+              <button type="button" data-product-color="pink" aria-label="Pink color"
+                class="h-4 w-4 rounded-full bg-pink-500"></button>
+            </div>
+          </div>
+
+          <!-- SIZE -->
+          <div class="mt-6">
+            <h3 class="mb-3 text-[13px] font-medium text-[#333]">Size</h3>
+
+            <div class="flex gap-2">
+              <button type="button" data-product-size="S"
+                class="border border-[#ed5275] px-3 py-1 text-[11px] text-[#ed5275]">S</button>
+              <button type="button" data-product-size="M"
+                class="border border-gray-200 px-3 py-1 text-[11px] hover:border-[#ed5275]">M</button>
+              <button type="button" data-product-size="L"
+                class="border border-gray-200 px-3 py-1 text-[11px] hover:border-[#ed5275]">L</button>
+              <button type="button" data-product-size="XL"
+                class="border border-gray-200 px-3 py-1 text-[11px] hover:border-[#ed5275]">XL</button>
+            </div>
+          </div>
+
+          <!-- QUANTITY AND ACTIONS -->
+          <div class="mt-7 flex flex-wrap items-center gap-2">
+
+            <div class="flex h-10 items-center border border-gray-200">
+              <button type="button" id="quantity-minus"
+                class="h-full w-9 text-lg hover:text-[#ed5275]"
+                aria-label="Decrease quantity">-</button>
+
+              <span id="product-quantity" class="min-w-8 text-center text-[13px]">1</span>
+
+              <button type="button" id="quantity-plus"
+                class="h-full w-9 text-lg hover:text-[#ed5275]"
+                aria-label="Increase quantity">+</button>
+            </div>
+
+            <!-- ADD TO CART -->
+            <button
+              type="button"
+              id="product-add-to-cart"
+              class="group relative isolate h-10 overflow-hidden bg-[#333] px-5 text-[11px] font-semibold uppercase text-white">
+
+              <span class="absolute inset-y-0 left-0 z-0 w-0 bg-[#ed5275] transition-all duration-500 group-hover:w-full"></span>
+
+              <span class="relative z-10">Add to Cart</span>
+            </button>
+
+            <button type="button" id="product-add-to-wishlist"
+              class="flex h-10 w-10 items-center justify-center border border-gray-200 text-lg transition hover:border-[#ed5275] hover:text-[#ed5275]"
+              aria-label="Add to wishlist">
+              ♡
+            </button>
+
+          </div>
+
+          <!-- PRODUCT META -->
+          <div class="mt-7 space-y-3 border-t border-gray-100 pt-5 text-[12px]">
+            <p><span class="font-medium text-[#333]">SKU:</span> 12345</p>
+            <p><span class="font-medium text-[#333]">Categories:</span> Flower</p>
+            <p><span class="font-medium text-[#333]">Tags:</span> Love, Flower, Floral</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT TABS -->
+      <section class="mt-12">
+
+        <div class="flex flex-wrap items-center justify-center border-y border-gray-200">
+
+          <button type="button" data-product-tab="description"
+            aria-selected="true"
+            class="bg-[#ed5275] px-4 py-2 text-[11px] text-white">
+            Description
+          </button>
+
+          <button type="button" data-product-tab="reviews"
+            aria-selected="false"
+            class="bg-[#333] px-4 py-2 text-[11px] text-white">
+            Reviews
+          </button>
+
+          <button type="button" data-product-tab="shipping"
+            aria-selected="false"
+            class="bg-[#333] px-4 py-2 text-[11px] text-white">
+            Shipping
+          </button>
+
+        </div>
+
+        <!-- DESCRIPTION PANEL -->
+        <div data-product-panel="description" class="py-5 text-[12px] leading-6 text-gray-500">
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+
+        </div>
+
+        <!-- REVIEWS PANEL -->
+        <div data-product-panel="reviews" class="hidden py-5">
+
+          <div class="mb-8 text-center">
+            <h3 class="inline-block border-b border-gray-200 px-10 pb-2 text-[13px] font-medium text-[#222]">
+              Customer Reviews
+            </h3>
+
+            <p class="mt-5 text-[11px] text-gray-500">
+              <span class="tracking-wider text-[#e8b34b]">★★★★☆</span>
+              (95 Reviews)
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 border-t border-gray-100 pt-7 md:grid-cols-2">
+
+            <!-- CUSTOMER REVIEW LIST -->
+            <div class="space-y-6">
+
+              <article class="flex gap-4">
+                <img src="/images/reviews/review-1.jpg" alt="Customer"
+                  class="h-14 w-14 shrink-0 rounded-full object-cover">
+
+                <div class="flex-1 bg-[#f3f5fa] p-5">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h4 class="text-[12px] font-medium text-[#222]">Adam Smit</h4>
+                    <span class="rounded-[3px] bg-[#ed5275] px-3 py-1 text-[10px] font-medium text-white">
+                      September 3, 2027
+                    </span>
+                  </div>
+
+                  <p class="mt-1 text-[11px] tracking-wider text-[#e8b34b]">★★★★☆</p>
+
+                  <p class="mt-2 text-[11px] leading-5 text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Doloribus, omnis fugit corporis iste magnam ratione.
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-4">
+                <img src="/images/reviews/review-2.jpg" alt="Customer"
+                  class="h-14 w-14 shrink-0 rounded-full object-cover">
+
+                <div class="flex-1 bg-[#f3f5fa] p-5">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h4 class="text-[12px] font-medium text-[#222]">Adam Smit</h4>
+                    <span class="rounded-[3px] bg-[#ed5275] px-3 py-1 text-[10px] font-medium text-white">
+                      September 2, 2027
+                    </span>
+                  </div>
+
+                  <p class="mt-1 text-[11px] tracking-wider text-[#e8b34b]">★★★★☆</p>
+
+                  <p class="mt-2 text-[11px] leading-5 text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Doloribus, omnis fugit corporis iste magnam ratione.
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-4">
+                <img src="/images/reviews/review-3.jpg" alt="Customer"
+                  class="h-14 w-14 shrink-0 rounded-full object-cover">
+
+                <div class="flex-1 bg-[#f3f5fa] p-5">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h4 class="text-[12px] font-medium text-[#222]">Adam Smit</h4>
+                    <span class="rounded-[3px] bg-[#ed5275] px-3 py-1 text-[10px] font-medium text-white">
+                      September 2, 2027
+                    </span>
+                  </div>
+
+                  <p class="mt-1 text-[11px] tracking-wider text-[#e8b34b]">★★★★☆</p>
+
+                  <p class="mt-2 text-[11px] leading-5 text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Doloribus, omnis fugit corporis iste magnam ratione.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- ADD A REVIEW -->
+            <div class="w-full md:pl-2">
+
+              <h3 class="mb-5 border-b border-gray-200 pb-3 text-left text-[13px] font-medium text-[#222]">
+                Add A Review
+              </h3>
+
+              <form id="product-review-form" class="w-full space-y-4">
+
+                <div>
+                  <label class="mb-2 block text-left text-[11px] text-[#333]">
+                    Your Ratings:
+                  </label>
+
+                  <div class="flex gap-1 text-lg text-[#e8b34b]">
+                    <button type="button" data-review-rating="1" aria-label="1 star">☆</button>
+                    <button type="button" data-review-rating="2" aria-label="2 stars">☆</button>
+                    <button type="button" data-review-rating="3" aria-label="3 stars">☆</button>
+                    <button type="button" data-review-rating="4" aria-label="4 stars">☆</button>
+                    <button type="button" data-review-rating="5" aria-label="5 stars">☆</button>
+                  </div>
+                </div>
+
+                <textarea id="review-message" rows="4" required
+                  placeholder="Type your comments..."
+                  class="w-full resize-y bg-[#f3f5fa] px-3 py-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"></textarea>
+
+                <input id="review-name" type="text" required
+                  placeholder="Type your name..."
+                  class="w-full bg-[#f3f5fa] px-3 py-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]">
+
+                <input id="review-email" type="email" required
+                  placeholder="Type your email..."
+                  class="w-full bg-[#f3f5fa] px-3 py-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]">
+
+                <input id="review-website" type="url"
+                  placeholder="Type your website..."
+                  class="w-full bg-[#f3f5fa] px-3 py-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]">
+
+                <label class="flex items-start gap-2 text-left text-[11px] leading-5 text-gray-500">
+                  <input type="checkbox" class="mt-1">
+                  <span>Save my name, email, and website in this browser for the next time I comment.</span>
+                </label>
+
+                <button type="submit"
+                  class="bg-[#ed5275] px-7 py-3 text-[11px] font-semibold uppercase text-white transition duration-300 hover:bg-[#333]">
+                  Submit
+                </button>
+
+                <p id="review-message-status" class="text-left text-[12px]" aria-live="polite"></p>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SHIPPING PANEL -->
+        <div data-product-panel="shipping" class="hidden py-5 text-[12px] leading-6">
+
+          <h3 class="mb-5 inline-block border-b border-gray-200 pb-2 text-[13px] font-medium text-[#222]">
+            Shipping policy for our store
+          </h3>
+
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nam voluptates rerum neque ea libero numquam officiis ipsum,
+            consectetur ducimus dicta in earum repellat sunt ab odit
+            laboriosam cupiditate ipsam, doloremque.
+          </p>
+
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-gray-500">
+            <li>1-2 business days (Typically by end of day)</li>
+            <li>30 days money back guaranty</li>
+            <li>24/7 live support</li>
+            <li>odio dignissim qui blandit praesent</li>
+            <li>luptatum zzril delenit augue duis dolore</li>
+            <li>te feugait nulla facilisi.</li>
+          </ul>
+
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Omnis, quia vel eligendi ipsam. Ea, quasi quam ducimus
+            recusandae unde ipsa nam rem a minus tenetur quae sint
+            voluptatem voluptate inventore.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- RELATED PRODUCTS -->
+      <section class="mt-16">
+
+        <h2 class="text-center text-[23px] font-semibold lowercase text-[#222]">
+          related products
+        </h2>
+
+        <div class="mx-auto mt-2 h-[2px] w-12 bg-[#ed5275]"></div>
+
+        <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+
+          <article class="group">
+            <a href="/product-details.html" class="block overflow-hidden bg-[#f7f7f7]">
+              <img src="/images/products/product-2.jpg" alt="Premium Joyful flower"
+                class="h-[180px] w-full object-contain transition duration-300 group-hover:scale-105 sm:h-[230px]">
+            </a>
+            <div class="mt-3">
+              <p class="text-[10px] tracking-wider text-[#e8b34b]">★★★★★</p>
+              <h3 class="mt-1 text-[11px] font-medium text-[#333]">PREMIUM JOYFUL</h3>
+              <p class="mt-2 text-[11px] text-[#333]">$39.00</p>
+            </div>
+          </article>
+
+          <article class="group">
+            <a href="/product-details.html" class="block overflow-hidden bg-[#f7f7f7]">
+              <img src="/images/products/product-3.jpg" alt="White rose flower"
+                class="h-[180px] w-full object-contain transition duration-300 group-hover:scale-105 sm:h-[230px]">
+            </a>
+            <div class="mt-3">
+              <p class="text-[10px] tracking-wider text-[#e8b34b]">★★★★★</p>
+              <h3 class="mt-1 text-[11px] font-medium text-[#333]">THE WHITE ROSE</h3>
+              <p class="mt-2 text-[11px] text-[#333]">$45.00</p>
+            </div>
+          </article>
+
+          <article class="group">
+            <a href="/product-details.html" class="block overflow-hidden bg-[#f7f7f7]">
+              <img src="/images/products/product-4.jpg" alt="Red rose bouquet"
+                class="h-[180px] w-full object-contain transition duration-300 group-hover:scale-105 sm:h-[230px]">
+            </a>
+            <div class="mt-3">
+              <p class="text-[10px] tracking-wider text-[#e8b34b]">★★★★★</p>
+              <h3 class="mt-1 text-[11px] font-medium text-[#333]">RED ROSE BOUQUET</h3>
+              <p class="mt-2 text-[11px] text-[#333]">$49.00</p>
+            </div>
+          </article>
+
+          <article class="group">
+            <a href="/product-details.html" class="block overflow-hidden bg-[#f7f7f7]">
+              <img src="/images/products/product-8.jpg" alt="Tropical Peace Lily"
+                class="h-[180px] w-full object-contain transition duration-300 group-hover:scale-105 sm:h-[230px]">
+            </a>
+            <div class="mt-3">
+              <p class="text-[10px] tracking-wider text-[#e8b34b]">★★★★★</p>
+              <h3 class="mt-1 text-[11px] font-medium text-[#333]">TROPICAL PEACE LILY</h3>
+              <p class="mt-2 text-[11px] text-[#333]">$29.00</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop beautiful flowers at Fiama Flower Shop">
+  <title>Shop | Fiama Flower Shop</title>
+</head>
+
+<body class="bg-white">
+
+  <div id="header"></div>
+
+  <main class="w-full bg-white px-3 py-4 sm:px-5">
+    <section class="mx-auto max-w-[1400px]">
+
+      <div class="grid grid-cols-1 gap-7 lg:grid-cols-[196px_minmax(0,1fr)] lg:gap-7">
+
+        <!-- SIDEBAR -->
+        <aside id="shop-sidebar" class="hidden space-y-8 lg:block">
+
+          <!-- PRICE -->
+          <div>
+            <h2 class="mb-3 border-b border-[#e5e5e5] pb-2 text-xs font-medium text-[#222]">Price</h2>
+
+            <div class="flex items-center justify-between text-[11px] text-[#333]">
+              <span>Your range:</span>
+              <span>$50 - $<span id="price-value">5000</span></span>
+            </div>
+
+            <input
+              id="price-range"
+              type="range"
+              min="50"
+              max="5000"
+              value="5000"
+              step="50"
+              class="mt-3 w-full cursor-pointer accent-[#ed5275]"
+            >
+          </div>
+
+          <!-- CATEGORIES -->
+          <div>
+            <h2 class="mb-4 border-b border-[#e5e5e5] pb-2 text-xs font-medium text-[#222]">Categories</h2>
+
+            <ul class="space-y-3 text-[11px] text-[#555]">
+              <li>Clothing</li>
+              <li>Bags</li>
+              <li>Shoes</li>
+              <li>Jewelry</li>
+              <li>Accessories</li>
+              <li>Food / Drink Store</li>
+              <li>Gift Store</li>
+              <li>Accessories</li>
+              <li>Watch</li>
+              <li>Uncategorized</li>
+              <li>Other</li>
+            </ul>
+          </div>
+
+          <!-- COLOR -->
+          <div>
+            <h2 class="mb-4 border-b border-[#e5e5e5] pb-2 text-xs font-medium text-[#222]">Color</h2>
+
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-color="pink" aria-label="Pink" class="h-5 w-5 rounded-full bg-[#ed5275]"></button>
+              <button type="button" data-color="green" aria-label="Green" class="h-5 w-5 rounded-full bg-[#91c84b]"></button>
+              <button type="button" data-color="purple" aria-label="Purple" class="h-5 w-5 rounded-full bg-[#7254c8]"></button>
+              <button type="button" data-color="white" aria-label="White" class="h-5 w-5 rounded-full border border-[#ddd] bg-white"></button>
+              <button type="button" data-color="red" aria-label="Red" class="h-5 w-5 rounded-full bg-red-600"></button>
+              <button type="button" data-color="yellow" aria-label="Yellow" class="h-5 w-5 rounded-full bg-yellow-400"></button>
+            </div>
+          </div>
+
+          <!-- SIZE -->
+          <div>
+            <h2 class="mb-4 border-b border-[#e5e5e5] pb-2 text-xs font-medium text-[#222]">Size</h2>
+
+            <div class="flex gap-4 text-[10px] text-[#555]">
+              <span>S</span>
+              <span>M</span>
+              <span>L</span>
+              <span>XL</span>
+              <span>XXL</span>
+            </div>
+          </div>
+
+          <!-- TAGS -->
+          <div>
+            <h2 class="mb-4 border-b border-[#e5e5e5] pb-2 text-xs font-medium text-[#222]">Tags</h2>
+
+            <div class="flex flex-wrap gap-x-2 gap-y-3 text-[11px] leading-6 text-[#555]">
+              <span>Popular</span><span>/</span>
+              <span>design</span><span>/</span>
+              <span>ux</span><span>/</span>
+              <span>usability</span><span>/</span>
+              <span>develop</span><span>/</span>
+              <span>icon</span><span>/</span>
+              <span>Car</span><span>/</span>
+              <span>Service</span><span>/</span>
+              <span>Repairs</span><span>/</span>
+              <span>Auto Parts</span><span>/</span>
+              <span>Oil</span><span>/</span>
+              <span>Dealer</span><span>/</span>
+              <span>Oil Change</span><span>/</span>
+              <span>Body Color</span>
+            </div>
+          </div>
+
+        </aside>
+        <!-- END SIDEBAR -->
+
+
+        <!-- PRODUCTS AREA -->
+        <div class="min-w-0">
+
+          <!-- MOBILE FILTER -->
+          <button
+            id="shop-filter-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="shop-sidebar"
+            class="mb-4 flex items-center gap-2 border border-[#ddd] px-4 py-2 text-xs lg:hidden">
+            <span>☰</span>
+            Filters
+          </button>
+
+          <!-- TOP TOOLBAR -->
+          <div class="mb-7 flex flex-wrap items-center justify-between gap-3">
+
+            <div class="flex min-w-0 flex-1 flex-wrap items-center gap-5">
+
+              <div class="flex h-8 w-full max-w-[196px] border border-[#ddd]">
+                <input
+                  id="shop-search"
+                  type="text"
+                  placeholder="Search your keyword..."
+                  class="min-w-0 flex-1 px-3 text-[10px] outline-none"
+                >
+
+                <button
+                  id="shop-search-button"
+                  type="button"
+                  aria-label="Search"
+                  class="flex w-8 shrink-0 items-center justify-center text-[#999]">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-4-4"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <p id="shop-results-count" class="text-xs text-[#555]">
+                Showing 9 of 9 results
+              </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+
+              <select
+                id="shop-sort"
+                class="h-8 w-[130px] border border-[#ddd] bg-white px-3 text-[10px] text-[#555] outline-none">
+                <option value="default">Default sorting</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="newest">Newest</option>
+              </select>
+
+              <button type="button" aria-label="Grid view" class="flex h-8 w-8 items-center justify-center bg-[#ed5275] text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                </svg>
+              </button>
+
+              <button type="button" aria-label="List view" class="flex h-8 w-8 items-center justify-center border border-[#ddd] text-[#555]">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+
+
+          <!-- PRODUCT GRID -->
+          <div id="shop-product-grid" class="grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-7">
+
+            <!-- PRODUCT 1 -->
+            <article data-name="Premium JOYFUL" data-price="16" data-category="bouquets" data-color="pink" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold text-white">HOT</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-2.jpg" alt="Premium JOYFUL" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Premium JOYFUL</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$16</p>
+            </article>
+
+            <!-- PRODUCT 2 -->
+            <article data-name="Pink Flower Tree" data-price="18" data-category="bouquets" data-color="pink" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold text-white">10%</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-1.jpg" alt="Pink Flower Tree" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Pink Flower Tree</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$18 <del class="ml-1 text-[9px] text-gray-400">$21</del></p>
+            </article>
+
+            <!-- PRODUCT 3 -->
+            <article data-name="Red Rose Bouquet" data-price="16" data-category="roses" data-color="red" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold text-white">HOT</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-4.jpg" alt="Red Rose Bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Red Rose Bouquet</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$16</p>
+            </article>
+
+            <!-- PRODUCT 4 -->
+            <article data-name="Pink Flower Tree" data-price="22" data-category="bouquets" data-color="pink" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold text-white">10%</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-5.jpg" alt="Pink Flower Tree" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Pink Flower Tree</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$22 <del class="ml-1 text-[9px] text-gray-400">$25</del></p>
+            </article>
+
+            <!-- PRODUCT 5 -->
+            <article data-name="Red Rose Bouquet" data-price="16" data-category="roses" data-color="red" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold text-white">HOT</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-6.jpg" alt="Red Rose Bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Red Rose Bouquet</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$16</p>
+            </article>
+
+            <!-- PRODUCT 6 -->
+            <article data-name="Pink Flower Tree" data-price="18" data-category="bouquets" data-color="pink" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold text-white">10%</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-7.jpg" alt="Pink Flower Tree" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Pink Flower Tree</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$18 <del class="ml-1 text-[9px] text-gray-400">$21</del></p>
+            </article>
+
+            <!-- PRODUCT 7 -->
+            <article data-name="Premium JOYFUL" data-price="16" data-category="roses" data-color="red" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold text-white">HOT</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-4.jpg" alt="Premium JOYFUL" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Premium JOYFUL</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$16</p>
+            </article>
+
+            <!-- PRODUCT 8 -->
+            <article data-name="Pink Flower Tree" data-price="18" data-category="bouquets" data-color="pink" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold text-white">10%</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-1.jpg" alt="Pink Flower Tree" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Pink Flower Tree</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$18 <del class="ml-1 text-[9px] text-gray-400">$21</del></p>
+            </article>
+
+            <!-- PRODUCT 9 -->
+            <article data-name="Red Rose Bouquet" data-price="16" data-category="roses" data-color="red" class="group min-w-0 text-center">
+              <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
+                <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold text-white">HOT</span>
+                <div class="aspect-[0.82/1] overflow-hidden">
+                  <img src="/images/products/product-8.jpg" alt="Red Rose Bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+              </a>
+              <h3 class="mt-3 text-[10px] font-medium uppercase text-[#222]">Red Rose Bouquet</h3>
+              <p class="mt-1 text-[11px] text-[#333]">$16</p>
+            </article>
+
+          </div>
+
+          <p id="shop-no-results" class="hidden py-10 text-center text-sm text-[#777]">
+            No products found.
+          </p>
+
+          <!-- PAGINATION -->
+          <nav aria-label="Pagination" class="mt-12 flex items-center justify-center gap-2 text-xs">
+
+            <a href="#top" data-pagination-scroll aria-label="Previous page"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f7f7f7] text-[#777] hover:bg-[#ed5275] hover:text-white">
+              ‹
+            </a>
+
+            <a href="#top" data-pagination-scroll
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f7f7f7] text-[#555]">
+              1
+            </a>
+
+            <a href="#top" data-pagination-scroll aria-current="page"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#ed5275] font-semibold text-white">
+              2
+            </a>
+
+            <a href="#top" data-pagination-scroll
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f7f7f7] text-[#555]">
+              3
+            </a>
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f7f7f7] text-[#555]">···</span>
+
+            <a href="#top" data-pagination-scroll aria-label="Next page"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f7f7f7] text-[#777] hover:bg-[#ed5275] hover:text-white">
+              ›
+            </a>
+
+          </nav>
+
+        </div>
+        <!-- END PRODUCTS AREA -->
+
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>
