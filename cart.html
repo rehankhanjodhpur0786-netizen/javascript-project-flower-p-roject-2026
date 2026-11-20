@@ -27,19 +27,19 @@
     </section>
 
     <!-- CART CONTENT -->
-    <section class="mx-auto max-w-[1200px] px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+    <section class="mx-auto w-full max-w-[1036px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-12 lg:px-0">
 
       <!-- CART ITEMS -->
       <div class="w-full">
 
-        <div id="cart-items" class="w-full">
+        <div id="cart-items" class="w-full min-w-0">
 
           <!-- Cart products will be added here using JavaScript -->
 
         </div>
 
         <!-- EMPTY CART -->
-        <div id="cart-empty" class="hidden py-16 text-center">
+        <div id="cart-empty" class="hidden py-12 text-center sm:py-16">
           <h2 class="text-xl font-semibold text-[#333]">Your cart is empty!</h2>
           <p class="mt-3 text-sm text-[#777]">
             Looks like you haven't added any flowers to your cart yet.
@@ -60,13 +60,13 @@
               id="cart-coupon"
               type="text"
               placeholder="Coupon code"
-              class="h-9 min-w-0 flex-1 bg-[#f7f7f7] px-4 text-[11px] outline-none"
+              class="h-9 min-w-0 flex-1 bg-[#f7f7f7] px-3 text-[11px] outline-none sm:px-4"
             >
 
             <button
               id="apply-coupon"
               type="button"
-              class="h-9 bg-[#555] px-6 text-[11px] font-semibold text-white transition hover:bg-[#ed5275]">
+              class="h-9 shrink-0 bg-[#555] px-4 text-[11px] font-semibold text-white transition hover:bg-[#ed5275] sm:px-6">
               Apply Coupon
             </button>
           </div>
@@ -85,7 +85,7 @@
       </div>
 
       <!-- CART TOTALS -->
-      <div id="cart-totals" class="mt-10 flex justify-end">
+      <div id="cart-totals" class="mt-8 flex justify-end sm:mt-10">
 
         <div class="w-full max-w-[400px]">
 
@@ -93,24 +93,24 @@
             Cart Totals
           </h2>
 
-          <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+          <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
             <span class="text-[#555]">Cart Subtotal</span>
-            <span id="cart-subtotal" class="text-[#222]">$0.00</span>
+            <span id="cart-subtotal" class="shrink-0 text-[#222]">$0.00</span>
           </div>
 
-          <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+          <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
             <span class="text-[#555]">Shipping and Handling</span>
-            <span id="cart-shipping" class="text-[#222]">$0.00</span>
+            <span id="cart-shipping" class="shrink-0 text-[#222]">$0.00</span>
           </div>
 
-          <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+          <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
             <span class="text-[#555]">Vat</span>
-            <span id="cart-vat" class="text-[#222]">$0.00</span>
+            <span id="cart-vat" class="shrink-0 text-[#222]">$0.00</span>
           </div>
 
-          <div class="flex items-center justify-between px-1 py-3 text-xs font-bold">
+          <div class="flex items-center justify-between gap-3 px-1 py-3 text-xs font-bold">
             <span class="text-[#222]">Order Total</span>
-            <span id="cart-total" class="text-black">$0.00</span>
+            <span id="cart-total" class="shrink-0 text-black">$0.00</span>
           </div>
 
           <a

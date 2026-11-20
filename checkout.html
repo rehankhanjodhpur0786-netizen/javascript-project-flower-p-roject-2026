@@ -20,14 +20,14 @@
       <h1 class="text-xl font-bold text-black">Checkout</h1>
 
       <nav aria-label="Breadcrumb" class="mt-1 flex items-center gap-3 text-[11px] text-black">
-        <a href="/index.html" class="hover:text-[#ed5275]">Home</a>
+        <a href="/index.html" class="transition-colors hover:text-[#ed5275]">Home</a>
         <span>›</span>
         <span>Checkout</span>
       </nav>
     </section>
 
     <!-- CHECKOUT CONTENT -->
-    <section class="mx-auto max-w-[1200px] px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+    <section class="mx-auto w-full max-w-[900px] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 lg:px-0 lg:pt-12">
 
       <!-- RETURNING CUSTOMER -->
       <div class="mb-4 bg-[#f7f7f7] px-4 py-3 text-[11px] text-black">
@@ -35,7 +35,7 @@
         <button
           type="button"
           id="checkout-login-toggle"
-          class="text-[#ed5275] hover:text-black">
+          class="text-[#ed5275] transition-colors hover:text-black">
           Click here to login
         </button>
 
@@ -58,7 +58,7 @@
         <button
           type="button"
           id="checkout-coupon-toggle"
-          class="text-[#ed5275] hover:text-black">
+          class="text-[#ed5275] transition-colors hover:text-black">
           Click here to enter your code
         </button>
 
@@ -68,18 +68,18 @@
             Enter your coupon code if you have one.
           </p>
 
-          <div class="flex max-w-[400px]">
+          <div class="flex w-full max-w-[400px]">
             <input
               id="checkout-coupon"
               type="text"
               placeholder="Coupon code"
-              class="h-10 min-w-0 flex-1 bg-white px-4 text-xs outline-none"
+              class="h-10 min-w-0 flex-1 bg-white px-3 text-xs outline-none sm:px-4"
             >
 
             <button
               type="button"
               id="checkout-apply-coupon"
-              class="bg-[#555] px-6 text-[11px] font-semibold text-white transition hover:bg-[#ed5275]">
+              class="shrink-0 bg-[#555] px-4 text-[11px] font-semibold text-white transition hover:bg-[#ed5275] sm:px-6">
               Apply Coupon
             </button>
           </div>
@@ -95,7 +95,7 @@
 
       <form id="checkout-form">
 
-        <div class="border border-[#e5e5e5] p-4 sm:p-6">
+        <div class="min-w-0 border border-[#e5e5e5] p-3 sm:p-5">
 
           <h3 class="mb-3 text-xs font-medium text-black">
             Personal Information
@@ -110,7 +110,7 @@
               placeholder="First name"
               required
               autocomplete="given-name"
-              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
             >
 
             <input
@@ -119,7 +119,7 @@
               placeholder="Last name"
               required
               autocomplete="family-name"
-              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
             >
 
             <input
@@ -128,7 +128,7 @@
               placeholder="email address"
               required
               autocomplete="email"
-              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
             >
 
             <input
@@ -137,7 +137,7 @@
               placeholder="phone number"
               required
               autocomplete="tel"
-              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
             >
 
             <input
@@ -145,20 +145,20 @@
               name="company"
               placeholder="Company name (optional)"
               autocomplete="organization"
-              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
             >
 
             <input
               type="text"
               name="companyAddress"
               placeholder="Company address (optional)"
-              class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+              class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
             >
 
           </div>
 
           <!-- COUNTRY -->
-          <div class="mt-5 max-w-[300px]">
+          <div class="mt-5 w-full max-w-[300px]">
 
             <label for="checkout-country" class="mb-2 block text-xs font-medium text-black">
               Country
@@ -194,14 +194,14 @@
                 placeholder="House number and street name"
                 required
                 autocomplete="street-address"
-                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+                class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
               >
 
               <input
                 type="text"
                 name="apartment"
                 placeholder="Apartment, suite, unit etc. (optional)"
-                class="h-[42px] w-full bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
+                class="h-[42px] w-full min-w-0 bg-[#f7f7f7] px-3 text-[11px] outline-none focus:ring-1 focus:ring-[#ed5275]"
               >
 
             </div>
@@ -211,7 +211,7 @@
           <!-- CITY STATE ZIP -->
           <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
 
-            <div>
+            <div class="min-w-0">
               <label for="checkout-city" class="mb-2 block text-xs font-medium text-black">
                 Town / City
               </label>
@@ -227,7 +227,7 @@
               >
             </div>
 
-            <div>
+            <div class="min-w-0">
               <label for="checkout-state" class="mb-2 block text-xs font-medium text-black">
                 State
               </label>
@@ -243,7 +243,7 @@
               >
             </div>
 
-            <div>
+            <div class="min-w-0">
               <label for="checkout-zip" class="mb-2 block text-xs font-medium text-black">
                 Zip
               </label>
@@ -290,10 +290,10 @@
         </div>
 
         <!-- PAYMENT AND TOTALS -->
-        <div class="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+        <div class="mt-8 grid min-w-0 grid-cols-1 gap-8 sm:mt-10 md:grid-cols-2 md:gap-10 lg:gap-16">
 
           <!-- PAYMENT METHOD -->
-          <div>
+          <div class="min-w-0">
 
             <h2 class="mb-4 w-fit border-b border-[#d9dfe3] pb-2 pr-16 text-sm font-medium text-black">
               Payment Method
@@ -345,7 +345,7 @@
 
                 <span>PayPal</span>
 
-                <span class="ml-2 flex items-center gap-1 font-bold text-[#1646a0]">
+                <span class="ml-2 flex flex-wrap items-center gap-1 font-bold text-[#1646a0]">
                   <span class="rounded bg-white px-1 text-[10px]">VISA</span>
                   <span class="rounded bg-white px-1 text-[10px]">Mastercard</span>
                 </span>
@@ -371,14 +371,14 @@
           </div>
 
           <!-- CART TOTALS -->
-          <div>
+          <div class="min-w-0">
 
             <h2 class="mb-4 w-fit border-b border-[#d9dfe3] pb-2 pr-16 text-sm font-medium text-black">
               Cart Totals
             </h2>
 
             <!-- PRODUCT LIST -->
-            <div id="checkout-order-items" class="w-full">
+            <div id="checkout-order-items" class="w-full min-w-0">
 
               <!-- Products will be loaded from cart using JavaScript -->
 
@@ -389,7 +389,7 @@
 
               <div
                 data-checkout-item
-                class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-[11px]">
+                class="flex min-w-0 items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-[11px]">
 
                 <div class="flex min-w-0 items-center gap-2">
 
@@ -415,35 +415,35 @@
             </template>
 
             <!-- SUBTOTAL -->
-            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+            <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
               <span class="text-[#555]">Cart Subtotal</span>
-              <span id="checkout-subtotal" class="text-black">$0.00</span>
+              <span id="checkout-subtotal" class="shrink-0 text-black">$0.00</span>
             </div>
 
             <!-- DISCOUNT -->
             <div
               id="checkout-discount-row"
-              class="hidden flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+              class="hidden flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
               <span class="text-[#555]">Discount</span>
-              <span id="checkout-discount" class="text-[#ed5275]">-$0.00</span>
+              <span id="checkout-discount" class="shrink-0 text-[#ed5275]">-$0.00</span>
             </div>
 
             <!-- SHIPPING -->
-            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+            <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
               <span class="text-[#555]">Shipping and Handling</span>
-              <span id="checkout-shipping" class="text-black">$0.00</span>
+              <span id="checkout-shipping" class="shrink-0 text-black">$0.00</span>
             </div>
 
             <!-- VAT -->
-            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs">
+            <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs">
               <span class="text-[#555]">Vat</span>
-              <span id="checkout-vat" class="text-black">$0.00</span>
+              <span id="checkout-vat" class="shrink-0 text-black">$0.00</span>
             </div>
 
             <!-- ORDER TOTAL -->
-            <div class="flex items-center justify-between border-b border-[#d9dfe3] px-1 py-3 text-xs font-bold">
+            <div class="flex items-center justify-between gap-3 border-b border-[#d9dfe3] px-1 py-3 text-xs font-bold">
               <span class="text-black">Order Total</span>
-              <span id="checkout-total" class="text-black">$0.00</span>
+              <span id="checkout-total" class="shrink-0 text-black">$0.00</span>
             </div>
 
           </div>

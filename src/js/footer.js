@@ -10,20 +10,32 @@ export function createFooter() {
   ];
 
   return `
-    <!-- Brand Logos -->
+    <!-- Brand Logos: Manual Horizontal Scroll -->
     <section class="bg-[#f8f8f8] border-t border-gray-100">
       <div class="max-w-[1076px] mx-auto px-5 min-h-[139px] flex items-center">
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-8 w-full">
-          ${logos.map((logo) => `
-            <div class="flex items-center justify-center">
-              <img
-                src="/images/logo/${logo}"
-                alt="Brand logo"
-                class="max-w-full h-auto max-h-[65px] object-contain grayscale opacity-60"
-              />
-            </div>
-          `).join("")}
+
+        <div
+          data-logo-slider
+          class="w-full overflow-x-auto cursor-grab select-none touch-pan-x [&::-webkit-scrollbar]:hidden"
+          style="scrollbar-width: none;"
+          aria-label="Brand logos"
+        >
+          <div data-logo-track class="flex items-center w-max">
+
+            ${logos.map((logo) => `
+              <div class="flex w-[200px] flex-none items-center justify-center px-4">
+                <img
+                  src="/images/logo/${logo}"
+                  alt="Brand logo"
+                  draggable="false"
+                  class="max-w-full h-auto max-h-[65px] object-contain grayscale opacity-60 pointer-events-none"
+                />
+              </div>
+            `).join("")}
+
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -139,13 +151,11 @@ export function createFooter() {
 
             <!-- Payment Methods -->
             <div class="flex items-center gap-2 mt-4 text-[8px] font-bold">
-
               <span class="bg-[#aaa] text-[#333] px-1.5 py-1 rounded-sm">VISA</span>
               <span class="bg-[#aaa] text-[#333] px-1.5 py-1 rounded-sm">PayPal</span>
               <span class="bg-[#aaa] text-[#333] px-1.5 py-1 rounded-sm">MASTER</span>
               <span class="bg-[#aaa] text-[#333] px-1.5 py-1 rounded-sm">AMEX</span>
               <span class="bg-[#aaa] text-[#333] px-1.5 py-1 rounded-sm">DISC</span>
-
             </div>
           </div>
 
@@ -206,4 +216,3 @@ export function createFooter() {
     </footer>
   `;
 }
- 

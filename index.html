@@ -10,132 +10,177 @@
 
 <body class="bg-white">
 
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <div id="header"></div>
 
   <main>
 
-    <!-- ================= HERO SLIDER ================= -->
-    <section class="hero-section">
+    <!-- HERO SLIDER -->
+    <section class="relative isolate h-[420px] w-full overflow-hidden bg-[#f0e5e1] sm:h-[520px] md:h-[745px]">
 
-      <input type="radio" name="hero-slider" id="hero-slide-1" class="sr-only" checked>
-      <input type="radio" name="hero-slider" id="hero-slide-2" class="sr-only">
+      <!-- SLIDER RADIO BUTTONS -->
+      <input
+        type="radio"
+        name="hero-slider"
+        id="hero-slide-1"
+        class="peer/slide1 sr-only"
+        checked
+      >
+     
 
-      <div class="hero-slider">
+      <input
+        type="radio"
+        name="hero-slider"
+        id="hero-slide-2"
+        class="peer/slide2 sr-only"
+      >
 
-        <!-- SLIDE 1 -->
-        <div class="hero-slide slide-1">
+      <!-- SLIDE 1 -->
+      <div class="absolute inset-0 hidden h-full w-full flex-row items-center bg-[#f0e5e1] peer-checked/slide1:flex">
 
-          <div class="hero-content">
+        <!-- TEXT -->
+        <div class="relative z-10 flex w-full flex-col items-start justify-center px-4 text-left sm:px-[8%] md:w-1/2 lg:pl-[11.6%] lg:pr-0">
 
-            <div class="hero-copy">
+          <h1 class="text-[26px] font-semibold leading-tight text-[#414141] sm:text-5xl lg:text-[58px]">
+            Fresh Flower
+          </h1>
 
-              <h1 class="text-[42px] font-semibold leading-tight text-[#414141] sm:text-5xl lg:text-[58px]">
-                Fresh Flower
-              </h1>
+          <p class="mt-2 text-sm tracking-wide text-[#777777] sm:text-2xl">
+            Natural &amp; Beautiful Flower Here
+          </p>
 
-              <p class="mt-2 text-xl tracking-wide text-[#777777] sm:text-2xl">
-                Natural &amp; Beautiful Flower Here
-              </p>
+          <div class="my-4 h-px w-[85px] bg-[#ed5275] md:w-[68px]"></div>
 
-              <div class="hero-line my-4 h-px w-[73px] bg-[#ed5275]"></div>
+          <p class="mb-6 max-w-full text-[13px] leading-6 text-[#333333] sm:max-w-[390px] sm:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore.
+          </p>
 
-              <p class="mb-6 max-w-[390px] text-sm leading-6 text-[#333333]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore.
-              </p>
-
-              <a href="/shop-left-sidebar.html"
-                class="inline-flex min-w-[135px] items-center justify-center rounded-full bg-[#ed5275] px-7 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#333333]">
-                Shop Now
-              </a>
-
-            </div>
-
-            <img
-              src="/images/banners/hero-banner-1.png"
-              alt="Fresh orange tulip flowers"
-              class="hero-image"
-            >
-
-          </div>
-
-          <label for="hero-slide-2" class="hero-arrow hero-prev" aria-label="Previous slide">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M15 18l-6-6 6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </label>
-
-          <label for="hero-slide-2" class="hero-arrow hero-next" aria-label="Next slide">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M9 18l6-6-6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </label>
+          <a
+            href="/shop-left-sidebar.html"
+            class="inline-flex min-w-[110px] items-center justify-center rounded-full bg-[#ed5275] px-6 py-3 text-sm md:min-w-[127px] md:px-7 font-semibold text-white transition-colors duration-300 hover:bg-[#333333]"
+          >
+            Shop Now
+          </a>
 
         </div>
 
-        <!-- SLIDE 2 -->
-        <div class="hero-slide slide-2">
+        <!-- FLOWER IMAGE (full background on desktop, bottom half on mobile) -->
+        <div class="absolute inset-0 z-0 h-full">
 
-          <div class="hero-content">
-
-            <div class="hero-copy">
-
-              <h2 class="text-[42px] font-semibold leading-tight text-[#414141] sm:text-5xl lg:text-[58px]">
-                Fresh Flower
-              </h2>
-
-              <p class="mt-2 text-xl tracking-wide text-[#777777] sm:text-2xl">
-                Natural &amp; Beautiful Flower Here
-              </p>
-
-              <div class="hero-line my-4 h-px w-[73px] bg-[#ed5275]"></div>
-
-              <p class="mb-6 max-w-[390px] text-sm leading-6 text-[#333333]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore.
-              </p>
-
-              <a href="/shop-left-sidebar.html"
-                class="inline-flex min-w-[135px] items-center justify-center rounded-full bg-[#ed5275] px-7 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#333333]">
-                Shop Now
-              </a>
-
-            </div>
-
-            <img
-              src="/images/banners/hero-banner-2.png"
-              alt="Beautiful flower arrangement"
-              class="hero-image"
-            >
-
-          </div>
-
-          <label for="hero-slide-1" class="hero-arrow hero-prev" aria-label="Previous slide">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M15 18l-6-6 6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </label>
-
-          <label for="hero-slide-1" class="hero-arrow hero-next" aria-label="Next slide">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M9 18l6-6-6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </label>
+          <img
+            src="/images/banners/hero-banner-1.png"
+            alt="Fresh orange tulip flowers"
+            class="h-full w-full object-cover object-[85%_50%] md:object-[60%_50%] lg:object-center"
+          >
 
         </div>
+
+        <!-- PREVIOUS ARROW -->
+        <label
+          for="hero-slide-2"
+          aria-label="Previous slide"
+          class="absolute left-3 top-1/2 z-30 hidden h-10 w-10 md:flex -translate-y-1/2 cursor-pointer items-center justify-center border border-[#999999]/50 bg-white/70 text-[#777777] transition hover:bg-[#ed5275] hover:text-white md:left-[3.6%]"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M15 18l-6-6 6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </label>
+
+        <!-- NEXT ARROW -->
+        <label
+          for="hero-slide-2"
+          aria-label="Next slide"
+          class="absolute right-3 top-1/2 z-30 hidden h-10 w-10 md:flex -translate-y-1/2 cursor-pointer items-center justify-center border border-[#999999]/50 bg-white/70 text-[#777777] transition hover:bg-[#ed5275] hover:text-white md:right-[3.6%]"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M9 18l6-6-6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </label>
 
       </div>
+
+      <!-- SLIDE 2 -->
+      <div class="absolute inset-0 hidden h-full w-full flex-row items-center bg-[#f9e1e7] peer-checked/slide2:flex">
+
+        <!-- TEXT -->
+        <div class="relative z-10 flex w-full flex-col items-start justify-center px-4 text-left sm:px-[8%] md:w-1/2 lg:pl-[11.6%] lg:pr-0">
+
+          <h2 class="text-[26px] font-semibold leading-tight text-[#414141] sm:text-5xl lg:text-[58px]">
+            Fresh Flower
+          </h2>
+
+          <p class="mt-2 text-sm tracking-wide text-[#777777] sm:text-2xl">
+            Natural &amp; Beautiful Flower Here
+          </p>
+
+          <div class="my-4 h-px w-[85px] bg-[#ed5275] md:w-[68px]"></div>
+
+          <p class="mb-6 max-w-full text-[13px] leading-6 text-[#333333] sm:max-w-[390px] sm:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore.
+          </p>
+
+          <a
+            href="/shop-left-sidebar.html"
+            class="inline-flex min-w-[110px] items-center justify-center rounded-full bg-[#ed5275] px-6 py-3 text-sm md:min-w-[127px] md:px-7 font-semibold text-white transition-colors duration-300 hover:bg-[#333333]"
+          >
+            Shop Now
+          </a>
+
+        </div>
+
+        <!-- FLOWER IMAGE (full background on desktop, bottom half on mobile) -->
+        <div class="absolute inset-0 z-0 h-full">
+
+          <img
+            src="/images/banners/hero-banner-2.png"
+            alt="Beautiful flower arrangement"
+            class="h-full w-full object-cover object-[85%_50%] md:object-[60%_50%] lg:object-center"
+          >
+
+        </div>
+
+        <!-- PREVIOUS ARROW -->
+        <label
+          for="hero-slide-1"
+          aria-label="Previous slide"
+          class="absolute left-3 top-1/2 z-30 hidden h-10 w-10 md:flex -translate-y-1/2 cursor-pointer items-center justify-center border border-[#999999]/50 bg-white/70 text-[#777777] transition hover:bg-[#ed5275] hover:text-white md:left-[3.6%]"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M15 18l-6-6 6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </label>
+
+        <!-- NEXT ARROW -->
+        <label
+          for="hero-slide-1"
+          aria-label="Next slide"
+          class="absolute right-3 top-1/2 z-30 hidden h-10 w-10 md:flex -translate-y-1/2 cursor-pointer items-center justify-center border border-[#999999]/50 bg-white/70 text-[#777777] transition hover:bg-[#ed5275] hover:text-white md:right-[3.6%]"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M9 18l6-6-6-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </label>
+
+      </div>
+
+      <!-- MOBILE SLIDER DOTS -->
+      <label for="hero-slide-1" aria-label="Show slide 1"
+        class="absolute bottom-14 left-[calc(50%-14px)] z-30 h-2.5 w-2.5 cursor-pointer rounded-full bg-[#cfcfcf] transition-colors peer-checked/slide1:bg-[#ed5275] md:hidden"></label>
+      <label for="hero-slide-2" aria-label="Show slide 2"
+        class="absolute bottom-14 left-[calc(50%+4px)] z-30 h-2.5 w-2.5 cursor-pointer rounded-full bg-[#cfcfcf] transition-colors peer-checked/slide2:bg-[#ed5275] md:hidden"></label>
+
     </section>
-    <!-- ================= END HERO SLIDER ================= -->
+    <!-- END HERO SLIDER -->
 
 
-    <!-- ================= SERVICE FEATURES ================= -->
-    <section class="relative z-20 mx-auto -mt-10 max-w-[1060px] bg-white px-5 py-7 shadow-sm sm:-mt-12 sm:px-8 lg:-mt-[53px] lg:px-10">
+    <!-- SERVICE FEATURES -->
+    <section class="relative z-20 mx-auto mt-[90px] max-w-[1060px] border border-gray-200 bg-white px-5 py-10 shadow-sm sm:-mt-12 sm:border-0 sm:px-8 sm:py-7 lg:-mt-[53px] lg:px-10">
 
-      <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+      <div class="grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-7 lg:grid-cols-4 lg:gap-6">
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center gap-4 sm:justify-start">
           <img src="/images/features/free-shipping.svg" alt="Free Shipping" class="h-10 w-10 shrink-0">
           <div>
             <h3 class="text-sm font-medium text-[#222222]">Free shipping</h3>
@@ -143,7 +188,7 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center gap-4 sm:justify-start">
           <img src="/images/features/15-days-returns.svg" alt="15 Days Returns" class="h-10 w-10 shrink-0">
           <div>
             <h3 class="text-sm font-medium text-[#222222]">15 days returns</h3>
@@ -151,7 +196,7 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center gap-4 sm:justify-start">
           <img src="/images/features/secure-checkout.svg" alt="Secure Checkout" class="h-10 w-10 shrink-0">
           <div>
             <h3 class="text-sm font-medium text-[#222222]">Secure checkout</h3>
@@ -159,7 +204,7 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center justify-center gap-4 sm:justify-start">
           <img src="/images/features/offer-and-gift.svg" alt="Offer and Gift" class="h-10 w-10 shrink-0">
           <div>
             <h3 class="text-sm font-medium text-[#222222]">Offer &amp; gift here</h3>
@@ -169,54 +214,42 @@
 
       </div>
     </section>
-    <!-- ================= END SERVICE FEATURES ================= -->
+    <!-- END SERVICE FEATURES -->
 
 
-    <!-- ================= PROMOTIONAL BANNERS ================= -->
-    <section class="w-full bg-white px-5 pt-[65px] pb-20">
+    <!-- PROMOTIONAL BANNERS -->
+    <section class="w-full bg-white px-5 pb-20 pt-[65px]">
 
       <div class="mx-auto grid w-full max-w-[1036px] grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
 
         <a href="/shop-left-sidebar.html" class="group block w-full overflow-hidden">
           <div class="aspect-[1.48/1] w-full overflow-hidden">
-            <img
-              src="/images/banners/offer-banner-1.jpg"
-              alt="30% Offer - Happy Flower's Day"
-              class="block h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-            >
+            <img src="/images/banners/offer-banner-1.jpg" alt="30% Offer - Happy Flower's Day"
+              class="block h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
           </div>
         </a>
 
         <a href="/shop-left-sidebar.html" class="group block w-full overflow-hidden">
           <div class="aspect-[1.48/1] w-full overflow-hidden">
-            <img
-              src="/images/banners/offer-banner-2.jpg"
-              alt="25% Offer - Happy Flower's Day"
-              class="block h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-            >
+            <img src="/images/banners/offer-banner-2.jpg" alt="25% Offer - Happy Flower's Day"
+              class="block h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
           </div>
         </a>
 
         <a href="/shop-left-sidebar.html" class="group block w-full overflow-hidden md:col-span-2 md:mx-auto md:w-1/2 lg:col-span-1 lg:w-full">
           <div class="aspect-[1.48/1] w-full overflow-hidden">
-            <img
-              src="/images/banners/offer-banner-3.jpg"
-              alt="40% Offer - Happy Flower's Day"
-              class="block h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-            >
+            <img src="/images/banners/offer-banner-3.jpg" alt="40% Offer - Happy Flower's Day"
+              class="block h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
           </div>
         </a>
 
       </div>
     </section>
-    <!-- ================= END PROMOTIONAL BANNERS ================= -->
+    <!-- END PROMOTIONAL BANNERS -->
 
 
-    <!-- =====================================================
-         NEW ARRIVAL ITEMS
-    ====================================================== -->
+    <!-- NEW ARRIVAL ITEMS -->
     <section class="w-full bg-white px-5 pb-12 pt-5">
-
       <div class="mx-auto max-w-[1036px]">
 
         <h2 class="mb-10 text-center text-2xl font-semibold lowercase text-[#222222]">
@@ -226,98 +259,178 @@
 
         <div class="grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-[30px]">
 
-          <!-- PRODUCT 1 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-1.jpg" alt="Pink Flower Tree" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Pink Flower Tree</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$18.00 <del class="ml-1 text-[9px] text-gray-400">$20.00</del></p>
           </article>
 
-          <!-- PRODUCT 2 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Hot</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-2.jpg" alt="Premium JOYFUL" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Premium JOYFUL</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$18.00</p>
           </article>
 
-          <!-- PRODUCT 3 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-3.jpg" alt="The White Rose" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">The White Rose</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$16.00 <del class="ml-1 text-[9px] text-gray-400">$18.00</del></p>
           </article>
 
-          <!-- PRODUCT 4 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Hot</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-4.jpg" alt="Red Rose Bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Red Rose Bouquet</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$20.00</p>
           </article>
 
-          <!-- PRODUCT 5 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Hot</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-5.jpg" alt="Heart's Desire" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Heart's Desire</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$15.00</p>
           </article>
 
-          <!-- PRODUCT 6 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-6.jpg" alt="Assorted Roses" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Assorted Roses</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$17.00</p>
           </article>
 
-          <!-- PRODUCT 7 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Hot</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-7.jpg" alt="Roses Surprise" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Roses Surprise</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$12.00</p>
           </article>
 
-          <!-- PRODUCT 8 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
-              <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
+              <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-8.jpg" alt="Tropical Peace Lily" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Tropical Peace Lily</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$14.00</p>
           </article>
@@ -325,48 +438,34 @@
         </div>
       </div>
     </section>
-    <!-- ================= END NEW ARRIVAL ITEMS ================= -->
+    <!-- END NEW ARRIVAL ITEMS -->
 
 
-    <!-- =====================================================
-         TULIP & BELLFLOWER CATEGORY BANNERS
-    ====================================================== -->
+    <!-- TULIP & BELLFLOWER BANNERS -->
     <section class="w-full bg-white px-5 py-7">
-
       <div class="mx-auto grid max-w-[1036px] grid-cols-1 gap-5 sm:grid-cols-2">
 
-        <!-- TULIP BANNER -->
         <a href="/shop-left-sidebar.html" class="group relative block overflow-hidden">
           <div class="aspect-[2.1/1] w-full overflow-hidden">
-            <img
-              src="/images/banners/tulip-banner.jpg"
-              alt="Tulip - Natural and Beautiful Flower"
-              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            >
+            <img src="/images/banners/tulip-banner.jpg" alt="Tulip - Natural and Beautiful Flower"
+              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
           </div>
         </a>
 
-        <!-- BELLFLOWER BANNER -->
         <a href="/shop-left-sidebar.html" class="group relative block overflow-hidden">
           <div class="aspect-[2.1/1] w-full overflow-hidden">
-            <img
-              src="/images/banners/bellflower-banner.jpg"
-              alt="Bellflower - Natural and Beautiful Flower"
-              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            >
+            <img src="/images/banners/bellflower-banner.jpg" alt="Bellflower - Natural and Beautiful Flower"
+              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
           </div>
         </a>
 
       </div>
     </section>
-    <!-- ================= END CATEGORY BANNERS ================= -->
+    <!-- END CATEGORY BANNERS -->
 
 
-    <!-- =====================================================
-         TOP PRODUCTS
-    ====================================================== -->
+    <!-- TOP PRODUCTS -->
     <section class="w-full bg-white px-5 pb-20 pt-8">
-
       <div class="mx-auto max-w-[1036px]">
 
         <h2 class="mb-10 text-center text-2xl font-semibold lowercase text-[#222222]">
@@ -376,50 +475,90 @@
 
         <div class="grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-[30px]">
 
-          <!-- TOP PRODUCT 1 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-1.jpg" alt="Pink Flower Tree" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Pink Flower Tree</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$18.00 <del class="ml-1 text-[9px] text-gray-400">$20.00</del></p>
           </article>
 
-          <!-- TOP PRODUCT 2 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Hot</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-2.jpg" alt="Premium 20Vell" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Premium 20Vell</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$18.00</p>
           </article>
 
-          <!-- TOP PRODUCT 3 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#91c84b] px-2 py-1 text-[9px] font-semibold uppercase text-white">Sale</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-3.jpg" alt="The White Rose" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">The White Rose</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$16.00 <del class="ml-1 text-[9px] text-gray-400">$18.00</del></p>
           </article>
 
-          <!-- TOP PRODUCT 4 -->
           <article class="group min-w-0 text-center">
+            <div class="relative overflow-hidden">
             <a href="/product-details.html" class="relative block overflow-hidden bg-[#f7f7f7]">
               <span class="absolute left-0 top-3 z-10 bg-[#ed5275] px-2 py-1 text-[9px] font-semibold uppercase text-white">Hot</span>
               <div class="aspect-[0.82/1] overflow-hidden">
                 <img src="/images/products/product-4.jpg" alt="Red Rose Bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
               </div>
             </a>
+            <div class="absolute inset-x-0 bottom-0 z-20 flex h-9 translate-y-full divide-x divide-white/20 bg-[#666666] transition-transform duration-300 focus-within:translate-y-0 group-hover:translate-y-0">
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" data-add-to-cart class="flex flex-1 items-center justify-center text-[8px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#ed5275]">Add to cart</button>
+              <button type="button" data-quick-view aria-label="Quick view" class="flex w-1/4 items-center justify-center text-white transition-colors duration-300 hover:bg-[#ed5275]">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            </div>
             <h3 class="mt-3 text-[10px] font-medium uppercase text-[#333333]">Red Rose Bouquet</h3>
             <p class="mt-1 text-[11px] text-[#555555]">$20.00</p>
           </article>
@@ -427,34 +566,23 @@
         </div>
       </div>
     </section>
-    <!-- ================= END TOP PRODUCTS ================= -->
+    <!-- END TOP PRODUCTS -->
 
 
-    <!-- =====================================================
-         DEAL OF THE DAY BANNER
-    ====================================================== -->
+    <!-- DEAL OF THE DAY -->
     <section class="w-full bg-white px-5 pb-12">
-
       <div class="mx-auto max-w-[1036px]">
-
         <a href="/shop-left-sidebar.html" class="group block overflow-hidden">
-          <img
-            src="/images/banners/deal-banner.jpg"
-            alt="Deal of the day - Shop your flower best offer $12"
-            class="block h-auto w-full transition-transform duration-700 ease-in-out group-hover:scale-110"
-          >
+          <img src="/images/banners/deal-banner.jpg" alt="Deal of the day - Shop your flower best offer $12"
+            class="block h-auto w-full transition-transform duration-700 ease-in-out group-hover:scale-110">
         </a>
-
       </div>
     </section>
-    <!-- ================= END DEAL BANNER ================= -->
+    <!-- END DEAL BANNER -->
 
 
-    <!-- =====================================================
-         LATEST NEWS
-    ====================================================== -->
+    <!-- LATEST NEWS -->
     <section class="w-full bg-white px-5 pb-20">
-
       <div class="mx-auto max-w-[1036px]">
 
         <h2 class="mb-10 text-center text-2xl font-semibold lowercase text-[#222222]">
@@ -464,7 +592,6 @@
 
         <div class="group/news relative" data-news-slider>
 
-          <!-- PREV BUTTON -->
           <button type="button" data-news-prev aria-label="Previous news"
             class="absolute left-2 top-[105px] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#333333] shadow-md transition-all duration-300 hover:bg-[#ed5275] hover:text-white lg:pointer-events-none lg:opacity-0 lg:group-hover/news:pointer-events-auto lg:group-hover/news:opacity-100">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -472,7 +599,6 @@
             </svg>
           </button>
 
-          <!-- NEXT BUTTON -->
           <button type="button" data-news-next aria-label="Next news"
             class="absolute right-2 top-[105px] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#333333] shadow-md transition-all duration-300 hover:bg-[#ed5275] hover:text-white lg:pointer-events-none lg:opacity-0 lg:group-hover/news:pointer-events-auto lg:group-hover/news:opacity-100">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -480,7 +606,6 @@
             </svg>
           </button>
 
-          <!-- SLIDER TRACK -->
           <div class="overflow-hidden">
             <div data-news-track class="flex gap-6">
 
@@ -491,7 +616,6 @@
                     <img src="/images/blog/blog-1.jpg" alt="Colorful tulips in a yellow basket" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
                   </div>
                 </a>
-
                 <div class="mt-3 flex items-center gap-4 text-[10px] text-[#555555]">
                   <span>Nov 18, 2027</span>
                   <span class="inline-flex items-center gap-1">
@@ -501,13 +625,9 @@
                     2
                   </span>
                 </div>
-
                 <h3 class="mt-2 text-sm font-medium leading-snug text-[#222222]">
-                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">
-                    Lorem ipsum dolor sit amet con adipisicing elit sed
-                  </a>
+                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">Lorem ipsum dolor sit amet con adipisicing elit sed</a>
                 </h3>
-
                 <span class="mt-3 block h-[2px] w-14 bg-[#ed5275]"></span>
               </article>
 
@@ -518,7 +638,6 @@
                     <img src="/images/blog/blog-2.jpg" alt="Pink roses bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
                   </div>
                 </a>
-
                 <div class="mt-3 flex items-center gap-4 text-[10px] text-[#555555]">
                   <span>Nov 18, 2027</span>
                   <span class="inline-flex items-center gap-1">
@@ -528,13 +647,9 @@
                     2
                   </span>
                 </div>
-
                 <h3 class="mt-2 text-sm font-medium leading-snug text-[#222222]">
-                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">
-                    Lorem ipsum dolor sit amet con adipisicing elit sed
-                  </a>
+                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">Lorem ipsum dolor sit amet con adipisicing elit sed</a>
                 </h3>
-
                 <span class="mt-3 block h-[2px] w-14 bg-[#ed5275]"></span>
               </article>
 
@@ -545,7 +660,6 @@
                     <img src="/images/blog/blog-3.jpg" alt="White flowers in a vase" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
                   </div>
                 </a>
-
                 <div class="mt-3 flex items-center gap-4 text-[10px] text-[#555555]">
                   <span>Nov 18, 2027</span>
                   <span class="inline-flex items-center gap-1">
@@ -555,13 +669,9 @@
                     2
                   </span>
                 </div>
-
                 <h3 class="mt-2 text-sm font-medium leading-snug text-[#222222]">
-                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">
-                    Lorem ipsum dolor sit amet con adipisicing elit sed
-                  </a>
+                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">Lorem ipsum dolor sit amet con adipisicing elit sed</a>
                 </h3>
-
                 <span class="mt-3 block h-[2px] w-14 bg-[#ed5275]"></span>
               </article>
 
@@ -572,23 +682,18 @@
                     <img src="/images/blog/blog-4.jpg" alt="Fresh flower bouquet" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
                   </div>
                 </a>
-
                 <div class="mt-3 flex items-center gap-4 text-[10px] text-[#555555]">
                   <span>Nov 18, 2027</span>
                   <span class="inline-flex items-center gap-1">
                     <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <path d="M21 12l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     2
                   </span>
                 </div>
-
                 <h3 class="mt-2 text-sm font-medium leading-snug text-[#222222]">
-                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">
-                    Lorem ipsum dolor sit amet con adipisicing elit sed
-                  </a>
+                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">Lorem ipsum dolor sit amet con adipisicing elit sed</a>
                 </h3>
-
                 <span class="mt-3 block h-[2px] w-14 bg-[#ed5275]"></span>
               </article>
 
@@ -599,7 +704,6 @@
                     <img src="/images/blog/blog-5.jpg" alt="Beautiful flower arrangement" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
                   </div>
                 </a>
-
                 <div class="mt-3 flex items-center gap-4 text-[10px] text-[#555555]">
                   <span>Nov 18, 2027</span>
                   <span class="inline-flex items-center gap-1">
@@ -609,35 +713,185 @@
                     2
                   </span>
                 </div>
-
                 <h3 class="mt-2 text-sm font-medium leading-snug text-[#222222]">
-                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">
-                    Lorem ipsum dolor sit amet con adipisicing elit sed
-                  </a>
+                  <a href="/blog-details.html" class="transition-colors duration-300 hover:text-[#ed5275]">Lorem ipsum dolor sit amet con adipisicing elit sed</a>
                 </h3>
-
                 <span class="mt-3 block h-[2px] w-14 bg-[#ed5275]"></span>
               </article>
 
             </div>
           </div>
-
         </div>
       </div>
-
     </section>
-    <!-- ================= END LATEST NEWS ================= -->
+    <!-- END LATEST NEWS -->
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <div id="footer"></div>
 
-  <!-- ================= JAVASCRIPT ================= -->
+
+  <!-- QUICK VIEW POPUP -->
+  <div id="quick-view-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-label="Quick view">
+    <div class="relative max-h-[92vh] w-full max-w-[664px] overflow-y-auto bg-white p-5 sm:p-8">
+
+      <button type="button" data-modal-close aria-label="Close"
+        class="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-sm bg-[#ed5275] text-white transition-colors duration-300 hover:bg-[#333333]">
+        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-[0.9fr_1fr] sm:gap-8">
+
+        <!-- IMAGE -->
+        <div class="flex items-center justify-center bg-[#f7f7f7]">
+          <img data-qv-image src="" alt="" class="block h-full max-h-[380px] w-full object-cover sm:max-h-none">
+        </div>
+
+        <!-- DETAILS -->
+        <div class="min-w-0 sm:pr-8">
+
+          <h2 data-qv-name class="text-2xl font-medium text-[#222222] sm:pr-6"></h2>
+
+          <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span class="flex items-baseline gap-3">
+              <span data-qv-price class="text-lg font-semibold text-[#ed5275]"></span>
+              <del data-qv-old class="hidden text-sm font-semibold text-[#ed5275]/70"></del>
+            </span>
+            <span class="flex items-center gap-1 text-[#f5b942]">
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round"/></svg>
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round"/></svg>
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round"/></svg>
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round"/></svg>
+              <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round"/></svg>
+              <span class="ml-1 text-[10px] text-[#f5b942]">( 95 Reviews )</span>
+            </span>
+          </div>
+
+          <p class="mt-6 text-sm leading-6 text-[#222222]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellendus repudiandae incidunt quidem pariatur expedita, quo quis modi tempore non.
+          </p>
+
+          <!-- COLOR -->
+          <div class="mt-6">
+            <p class="text-sm font-medium text-[#222222]">Color</p>
+            <div class="mt-3 flex items-center gap-3">
+              <label class="cursor-pointer"><input type="radio" name="qv-color" class="peer sr-only" checked aria-label="Pink"><span class="block h-5 w-5 rounded-full bg-[#ed5275] ring-offset-2 peer-checked:ring-2 peer-checked:ring-[#999999]"></span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-color" class="peer sr-only" aria-label="Green"><span class="block h-5 w-5 rounded-full bg-[#91c84b] ring-offset-2 peer-checked:ring-2 peer-checked:ring-[#999999]"></span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-color" class="peer sr-only" aria-label="Purple"><span class="block h-5 w-5 rounded-full bg-[#6a5acd] ring-offset-2 peer-checked:ring-2 peer-checked:ring-[#999999]"></span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-color" class="peer sr-only" aria-label="White"><span class="block h-5 w-5 rounded-full border border-gray-200 bg-white ring-offset-2 peer-checked:ring-2 peer-checked:ring-[#999999]"></span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-color" class="peer sr-only" aria-label="Red"><span class="block h-5 w-5 rounded-full bg-[#ff0000] ring-offset-2 peer-checked:ring-2 peer-checked:ring-[#999999]"></span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-color" class="peer sr-only" aria-label="Yellow"><span class="block h-5 w-5 rounded-full bg-[#ffff00] ring-offset-2 peer-checked:ring-2 peer-checked:ring-[#999999]"></span></label>
+            </div>
+          </div>
+
+          <!-- SIZE -->
+          <div class="mt-6">
+            <p class="text-sm font-medium text-[#222222]">Size</p>
+            <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+              <label class="cursor-pointer"><input type="radio" name="qv-size" class="peer sr-only"><span class="text-xs text-[#333333] peer-checked:font-semibold peer-checked:text-[#ed5275]">S</span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-size" class="peer sr-only"><span class="text-xs text-[#333333] peer-checked:font-semibold peer-checked:text-[#ed5275]">M</span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-size" class="peer sr-only"><span class="text-xs text-[#333333] peer-checked:font-semibold peer-checked:text-[#ed5275]">L</span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-size" class="peer sr-only"><span class="text-xs text-[#333333] peer-checked:font-semibold peer-checked:text-[#ed5275]">XL</span></label>
+              <label class="cursor-pointer"><input type="radio" name="qv-size" class="peer sr-only"><span class="text-xs text-[#333333] peer-checked:font-semibold peer-checked:text-[#ed5275]">XXL</span></label>
+            </div>
+          </div>
+
+          <!-- QUANTITY / ADD TO CART / WISHLIST -->
+          <div class="mt-8 flex flex-wrap items-stretch gap-3">
+            <div class="flex h-10 items-center bg-[#f7f7f7] text-xs text-[#333333]">
+              <button type="button" data-qty-minus aria-label="Decrease quantity" class="h-full px-3 transition-colors duration-300 hover:text-[#ed5275]">-</button>
+              <span data-qv-qty class="w-8 text-center">01</span>
+              <button type="button" data-qty-plus aria-label="Increase quantity" class="h-full px-3 transition-colors duration-300 hover:text-[#ed5275]">+</button>
+            </div>
+            <button type="button" data-qv-add class="h-10 bg-[#ed5275] px-5 text-[11px] font-semibold uppercase text-white transition-colors duration-300 hover:bg-[#333333]">Add to cart</button>
+            <button type="button" data-qv-wishlist aria-label="Add to wishlist" class="flex h-10 w-10 items-center justify-center bg-[#f7f7f7] text-[#333333] transition-colors duration-300 hover:text-[#ed5275]">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+
+          <!-- SHARE -->
+          <div class="mt-6 flex items-center gap-5 text-sm text-[#222222]">
+            <span>Share:</span>
+            <a href="#" aria-label="Share on Facebook" class="text-[#555555] transition-colors duration-300 hover:text-[#ed5275]">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" aria-label="Share on Twitter" class="text-[#555555] transition-colors duration-300 hover:text-[#ed5275]">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" aria-label="Share on Pinterest" class="text-[#555555] transition-colors duration-300 hover:text-[#ed5275]">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3.5"/><path d="M12 13.5L10.5 21M12 2a8 8 0 0 0-3 15.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" aria-label="Share on Instagram" class="text-[#555555] transition-colors duration-300 hover:text-[#ed5275]">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END QUICK VIEW POPUP -->
+
+
+  <!-- ADDED TO CART POPUP -->
+  <div id="cart-modal" class="fixed inset-0 z-[110] hidden items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-label="Added to cart">
+    <div class="relative w-full max-w-[365px] bg-white px-5 pb-6 pt-5">
+
+      <button type="button" data-modal-close aria-label="Close"
+        class="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-sm bg-[#ed5275] text-white transition-colors duration-300 hover:bg-[#333333]">
+        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="flex items-start gap-5 pb-8">
+
+        <div class="h-[112px] w-[85px] shrink-0 bg-[#f7f7f7]">
+          <img data-cart-image src="" alt="" class="block h-full w-full object-cover">
+        </div>
+
+        <div class="min-w-0 pr-6 pt-1">
+          <h3 data-cart-name class="text-sm font-medium text-[#222222]"></h3>
+
+          <p class="mt-3 flex items-center gap-2 text-xs text-[#222222]">
+            <svg class="h-4 w-4 shrink-0 text-[#2e9e44]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.4L6.4 12l1.4-1.4 3 3 5.4-5.4 1.4 1.4-6.8 6.8z"/></svg>
+            Successfully added to your Cart
+          </p>
+
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            <a href="/cart.html" class="bg-[#ed5275] px-4 py-2 text-xs font-semibold text-white transition-colors duration-300 hover:bg-[#333333]">View Cart</a>
+            <a href="/checkout.html" class="bg-[#555555] px-4 py-2 text-xs font-semibold text-white transition-colors duration-300 hover:bg-[#ed5275]">Checkout</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-200 pt-6 text-center">
+        <p class="text-xs leading-6 text-[#333333]">
+          We want to give you <strong class="font-semibold text-[#222222]">10% discount</strong> for your first order,<br>
+          Use (fiama10) discount code at checkout
+        </p>
+
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+          <span class="flex h-5 w-9 items-center justify-center border border-gray-200 bg-white text-[7px] font-bold italic text-[#1a1f71]">VISA</span>
+          <span class="flex h-5 w-9 items-center justify-center border border-gray-200 bg-white text-[7px] font-bold text-[#eb001b]">Master</span>
+          <span class="flex h-5 w-9 items-center justify-center border border-gray-200 bg-[#fff4d6] text-[7px] font-bold text-[#003087]">PayPal</span>
+          <span class="flex h-5 w-9 items-center justify-center bg-[#2a77b8] text-[6px] font-bold text-white">AMEX</span>
+          <span class="flex h-5 w-9 items-center justify-center bg-[#1a5aa3] text-[6px] font-bold text-white">VISA</span>
+          <span class="flex h-5 w-9 items-center justify-center bg-[#8e44ad] text-[6px] font-bold text-white">LASER</span>
+          <span class="flex h-5 w-9 items-center justify-center bg-[#2b4f9e] text-[6px] font-bold text-white">Maestro</span>
+          <span class="flex h-5 w-9 items-center justify-center bg-[#1e6fbf] text-[6px] font-bold text-white">Solo</span>
+          <span class="flex h-5 w-9 items-center justify-center bg-[#a23bb8] text-[6px] font-bold text-white">DELTA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END ADDED TO CART POPUP -->
+
+
+  <!-- JAVASCRIPT -->
   <script type="module" src="/src/main.js"></script>
   <script type="module" src="/src/js/main.js"></script>
 
 </body>
 </html>
-
-<!--  -->
